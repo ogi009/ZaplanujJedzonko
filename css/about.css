@@ -1,0 +1,21 @@
+section {
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    width: 930px;
+    margin: auto;
+
+}
+
+.article_title {
+    color: #4a4a49;
+    font-size: 36px;
+}
+
+.article_text {
+    color: #4a4a49;
+    font-size: 28px;
+}
