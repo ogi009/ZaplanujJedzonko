@@ -486,4 +486,33 @@ textarea {
 .navigation_link:hover {
   color: #FF6600;
 }
+
+.banner {
+  font-size: 10px;
+  position: relative;
+  max-width: 80vw;
+  margin: 0 auto;
+}
+.banner .banner_img {
+  max-height: 50em;
+  display: flex;
+  overflow-x: hidden;
+}
+.banner .banner_img img {
+  width: 100%;
+}
+.banner .fa-arrow-right {
+  font-size: 3em;
+  position: absolute;
+  top: calc(50% - 0.5em);
+  right: 3%;
+  cursor: pointer;
+}
+.banner .fa-arrow-left {
+  font-size: 3em;
+  position: absolute;
+  top: calc(50% - 0.5em);
+  left: 3%;
+  cursor: pointer;
+}
 /*# sourceMappingURL=main.css.map */
