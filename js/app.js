@@ -5,17 +5,22 @@ document.addEventListener("DOMContentLoaded", function () {
         const banner = document.querySelector(".banner_img");
 
         const moveBanner = (target) => {
-            if (banner.scrollLeft === 0) {
-                target.className.includes('right') ? banner.scrollTo({left: 1440, behavior: 'smooth'})
-                    : banner.scrollTo({left: 2880, behavior: 'smooth'})
+            const width = banner.children[0].width;
 
-            } else if (banner.scrollLeft === 1440) {
-                target.className.includes('right') ? banner.scrollTo({left: 2880, behavior: 'smooth'})
+            if (banner.scrollLeft === 0) {
+                target.className.includes('right') ?
+                    banner.scrollTo({left: width, behavior: 'smooth'})
+                    : banner.scrollTo({left: 2*width, behavior: 'smooth'})
+
+            } else if (banner.scrollLeft === width) {
+                target.className.includes('right') ?
+                    banner.scrollTo({left: 2*width, behavior: 'smooth'})
                     : banner.scrollTo({left: 0, behavior: 'smooth'})
 
-            } else if (banner.scrollLeft === 2880) {
-                target.className.includes('right') ? banner.scrollTo({left: 0, behavior: 'smooth'})
-                    : banner.scrollTo({left: 1440, behavior: 'smooth'})
+            } else if (banner.scrollLeft === 2*width) {
+                target.className.includes('right') ?
+                    banner.scrollTo({left: 0, behavior: 'smooth'})
+                    : banner.scrollTo({left: width, behavior: 'smooth'})
             }
         }
 

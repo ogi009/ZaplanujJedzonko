@@ -456,7 +456,7 @@ textarea {
 .banner {
   font-size: 10px;
   position: relative;
-  max-width: 1440px;
+  max-width: 80vw;
   margin: 0 auto;
 }
 .banner .banner_img {
