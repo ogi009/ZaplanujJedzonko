@@ -1,0 +1,34 @@
+.banner {
+  font-size: 10px;
+  position: relative;
+
+  .banner_img {
+    max-width: 144em;
+    max-height: 50em;
+    display: flex;
+    overflow-x: hidden;
+    margin: 0 auto;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .fa-arrow-right {
+    font-size: 5em;
+    position: absolute;
+    top: calc(50% - 0.5em);
+    right: 3em;
+    cursor: pointer;
+
+  }
+  .fa-arrow-left {
+    font-size: 5em;
+    position: absolute;
+    top: calc(50% - 0.5em);
+    left: 3em;
+    cursor: pointer;
+  }
+
+
+}
