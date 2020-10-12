@@ -447,9 +447,43 @@ textarea {
 }
 
 .first_navigation {
-  width: 80vw;
-  background-color: blue;
+  width: 80%;
+  background-color: #5B605F;
   display: flex;
   justify-content: space-between;
+}
+
+.navigation_logo {
+  font-family: "Charmonman", sans-serif;
+  color: white;
+  margin: 2rem;
+  font-size: 3rem;
+  padding-left: 3rem;
+}
+
+.navigation_logo_2 {
+  color: #E58A20;
+}
+
+.nav_list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  width: 50rem;
+  color: white;
+  list-style: none;
+  margin-right: 3rem;
+}
+
+.navigation_link {
+  color: white;
+  text-decoration: none;
+  margin-right: 3rem;
+}
+
+.navigation_link:hover {
+  color: #FF6600;
 }
 /*# sourceMappingURL=main.css.map */
