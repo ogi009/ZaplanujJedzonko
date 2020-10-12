@@ -468,17 +468,17 @@ textarea {
   width: 100%;
 }
 .banner .fa-arrow-right {
-  font-size: 5em;
+  font-size: 3em;
   position: absolute;
   top: calc(50% - 0.5em);
-  right: 3em;
+  right: 10%;
   cursor: pointer;
 }
 .banner .fa-arrow-left {
-  font-size: 5em;
+  font-size: 3em;
   position: absolute;
   top: calc(50% - 0.5em);
-  left: 3em;
+  left: 10%;
   cursor: pointer;
 }
 /*# sourceMappingURL=main.css.map */

@@ -9,24 +9,24 @@
     overflow-x: hidden;
     margin: 0 auto;
 
+
     img {
       width: 100%;
     }
   }
 
   .fa-arrow-right {
-    font-size: 5em;
+    font-size: 3em;
     position: absolute;
     top: calc(50% - 0.5em);
-    right: 3em;
+    right: 10%;
     cursor: pointer;
-
   }
   .fa-arrow-left {
-    font-size: 5em;
+    font-size: 3em;
     position: absolute;
     top: calc(50% - 0.5em);
-    left: 3em;
+    left: 10%;
     cursor: pointer;
   }
 
