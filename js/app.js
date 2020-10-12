@@ -5,6 +5,9 @@ document.addEventListener("DOMContentLoaded", function () {
         const banner = document.querySelector(".banner_img");
 
         const moveBanner = (target) => {
+            if(banner.scrollLeft % banner.children[0].width){
+                banner.scrollLeft = 0;
+            }
             const width = banner.children[0].width;
 
             if (banner.scrollLeft === 0) {
