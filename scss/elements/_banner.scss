@@ -1,14 +1,13 @@
 .banner {
   font-size: 10px;
   position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
 
   .banner_img {
-    max-width: 144em;
     max-height: 50em;
     display: flex;
     overflow-x: hidden;
-    margin: 0 auto;
-
 
     img {
       width: 100%;
@@ -19,14 +18,15 @@
     font-size: 3em;
     position: absolute;
     top: calc(50% - 0.5em);
-    right: 10%;
+    right: 3%;
     cursor: pointer;
   }
+
   .fa-arrow-left {
     font-size: 3em;
     position: absolute;
     top: calc(50% - 0.5em);
-    left: 10%;
+    left: 3%;
     cursor: pointer;
   }
 
