@@ -1,0 +1,43 @@
+
+.calltoaction {
+  box-sizing: border-box;
+  padding: 0 100px;
+
+  width: 80vw;
+  height: 180px;
+  margin: 0 auto;
+  background-color: $colorNav;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-family: $fontOpenSans;
+
+
+
+  .calltoaction__box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+  }
+  h3 {
+    font-size: 22px;
+    font-weight: 600;
+    padding-bottom: 30px;
+  }
+  p{
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+  }
+
+  button {
+    background-color: $colorButtons;
+    color: white;
+    font-weight: 700;
+    padding: 15px 40px;
+    border: none;
+
+  }
+}

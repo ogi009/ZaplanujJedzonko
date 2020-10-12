@@ -452,4 +452,41 @@ textarea {
   display: flex;
   justify-content: space-between;
 }
+
+.calltoaction {
+  box-sizing: border-box;
+  padding: 0 100px;
+  width: 80vw;
+  height: 180px;
+  margin: 0 auto;
+  background-color: #5B605F;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+}
+.calltoaction .calltoaction__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 70%;
+}
+.calltoaction h3 {
+  font-size: 22px;
+  font-weight: 600;
+  padding-bottom: 30px;
+}
+.calltoaction p {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+}
+.calltoaction button {
+  background-color: #FF6600;
+  color: white;
+  font-weight: 700;
+  padding: 15px 40px;
+  border: none;
+}
 /*# sourceMappingURL=main.css.map */
