@@ -46,7 +46,7 @@
     }
 
     .fa-user-circle {
-      color: $colorLogo;
+      color: $colorButtons;
       font-size: 1.5em;
     }
   }
@@ -74,11 +74,11 @@
 
 
     &:hover {
-      border-left: 0.3em solid $colorLogo;
+      border-left: 0.3em solid $colorButtons;
 
       span {
         display: block;
-        color: $colorLogo;
+        color: $colorButtons;
       }
     }
   }
