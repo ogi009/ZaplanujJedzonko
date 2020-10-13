@@ -595,7 +595,6 @@ section {
 
 * {
   box-sizing: border-box;
-  width: 100vw;
 }
 
 .grid_container {
@@ -610,63 +609,51 @@ section {
 }
 .grid_container .grid_row .col-1 {
   min-height: 1px;
-  width: 8.3333333333%;
-  padding: 12px;
+  width: 8.3333333333vw;
 }
 .grid_container .grid_row .col-2 {
   min-height: 1px;
-  width: 16.6666666667%;
-  padding: 12px;
+  width: 16.6666666667vw;
 }
 .grid_container .grid_row .col-3 {
   min-height: 1px;
-  width: 25%;
-  padding: 12px;
+  width: 25vw;
 }
 .grid_container .grid_row .col-4 {
   min-height: 1px;
-  width: 33.3333333333%;
-  padding: 12px;
+  width: 33.3333333333vw;
 }
 .grid_container .grid_row .col-5 {
   min-height: 1px;
-  width: 41.6666666667%;
-  padding: 12px;
+  width: 41.6666666667vw;
 }
 .grid_container .grid_row .col-6 {
   min-height: 1px;
-  width: 50%;
-  padding: 12px;
+  width: 50vw;
 }
 .grid_container .grid_row .col-7 {
   min-height: 1px;
-  width: 58.3333333333%;
-  padding: 12px;
+  width: 58.3333333333vw;
 }
 .grid_container .grid_row .col-8 {
   min-height: 1px;
-  width: 66.6666666667%;
-  padding: 12px;
+  width: 66.6666666667vw;
 }
 .grid_container .grid_row .col-9 {
   min-height: 1px;
-  width: 75%;
-  padding: 12px;
+  width: 75vw;
 }
 .grid_container .grid_row .col-10 {
   min-height: 1px;
-  width: 83.3333333333%;
-  padding: 12px;
+  width: 83.3333333333vw;
 }
 .grid_container .grid_row .col-11 {
   min-height: 1px;
-  width: 91.6666666667%;
-  padding: 12px;
+  width: 91.6666666667vw;
 }
 .grid_container .grid_row .col-12 {
   min-height: 1px;
-  width: 100%;
-  padding: 12px;
+  width: 100vw;
 }
 
 .app {
@@ -675,16 +662,73 @@ section {
   height: 100vh;
 }
 .app .first_row {
-  min-height: 8%;
-  background-color: blue;
+  min-height: 10%;
 }
 .app .second_row {
-  min-height: 92%;
+  min-height: 90%;
 }
-.app .second_row .col-2 {
-  background-color: tomato;
+
+.app_header {
+  background-color: #4a4a49;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
 }
-.app .second_row .col-10 {
-  background-color: black;
+.app_header .navigation_logo {
+  margin: 0;
+  padding: 1.5em;
+}
+.app_header .navigation_logo .logo_link {
+  font-size: 2.2em;
+  margin: 0;
+  padding: 0;
+}
+.app_header .user_logo {
+  font-size: 2em;
+  font-family: "Open Sans", sans-serif;
+  margin-right: 0.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.app_header .user_logo .user_name {
+  margin-right: 0.7em;
+  color: #FFFFFA;
+}
+.app_header .user_logo .fa-user-circle {
+  color: #E58A20;
+  font-size: 1.5em;
+}
+
+.app_nav {
+  background-color: #5B605F;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.app_nav .app_nav-ref {
+  width: 100%;
+  text-decoration: none;
+  font-size: 1.5em;
+  font-family: "Open Sans", sans-serif;
+  color: #FFFFFA;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+}
+.app_nav .app_nav-ref span {
+  display: none;
+}
+.app_nav .app_nav-ref:hover {
+  border-left: 0.3em solid #E58A20;
+}
+.app_nav .app_nav-ref:hover span {
+  display: block;
+  color: #E58A20;
+}
+
+.app_content {
+  background-color: #FFFFFA;
 }
 /*# sourceMappingURL=main.css.map */

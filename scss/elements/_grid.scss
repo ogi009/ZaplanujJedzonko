@@ -1,8 +1,7 @@
 $columns: 12;
-$column-base-width: 100% / $columns;
+$column-base-width: 100vw / $columns;
 * {
   box-sizing: border-box;
-  width: 100vw;
 }
 .grid_container {
   width: 100vw;
@@ -16,7 +15,6 @@ $column-base-width: 100% / $columns;
       .col-#{$i} {
         min-height: 1px;
         width: $column-base-width * $i;
-        padding: 12px;
       }
     }
   }

@@ -3,18 +3,88 @@
   margin: 0;
   padding: 0;
   height: 100vh;
+
   .first_row {
-    min-height: 8%;
-    background-color: blue;
+    min-height: 10%;
   }
+
   .second_row {
-    min-height: 92%;
-    .col-2 {
-      background-color: tomato;
-    }
-    .col-10 {
-      background-color: black;
+    min-height: 90%;
+  }
+
+}
+
+.app_header {
+  background-color: $colorHeader;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+
+  .navigation_logo {
+    margin: 0;
+    padding: 1.5em;
+
+    .logo_link {
+      font-size: 2.2em;
+      margin: 0;
+      padding: 0;
     }
   }
 
+  .user_logo {
+    font-size: 2em;
+    font-family: $fontOpenSans;
+    margin-right: 0.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .user_name {
+      margin-right: 0.7em;
+      color: $colorBackground;
+    }
+
+    .fa-user-circle {
+      color: $colorLogo;
+      font-size: 1.5em;
+    }
+  }
+}
+
+.app_nav {
+  background-color: $colorNav;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+
+  .app_nav-ref {
+    width: 100%;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-family: $fontOpenSans;
+    color: $colorBackground;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+
+    span {
+      display: none;
+    }
+
+
+    &:hover {
+      border-left: 0.3em solid $colorLogo;
+
+      span {
+        display: block;
+        color: $colorLogo;
+      }
+    }
+  }
+}
+
+
+.app_content {
+  background-color: $colorBackground;
 }
