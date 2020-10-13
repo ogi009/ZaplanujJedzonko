@@ -451,14 +451,23 @@ textarea {
   background-color: #5B605F;
   display: flex;
   justify-content: space-between;
+  position: relative;
+  -webkit-animation: logo_move 2s 1 alternate;
+          animation: logo_move 2s 1 alternate;
 }
 
 .navigation_logo {
+  margin: 2rem;
+  padding-left: 3rem;
+}
+
+.logo_link {
   font-family: "Charmonman", sans-serif;
   color: white;
   margin: 2rem;
   font-size: 3rem;
   padding-left: 3rem;
+  text-decoration: none;
 }
 
 .navigation_logo_2 {
@@ -485,5 +494,27 @@ textarea {
 
 .navigation_link:hover {
   color: #FF6600;
+}
+
+@-webkit-keyframes logo_move {
+  0% {
+    position: absolute;
+    top: -400px;
+  }
+  100% {
+    position: absolute;
+    top: 0;
+  }
+}
+
+@keyframes logo_move {
+  0% {
+    position: absolute;
+    top: -400px;
+  }
+  100% {
+    position: absolute;
+    top: 0;
+  }
 }
 /*# sourceMappingURL=main.css.map */
