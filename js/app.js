@@ -10,11 +10,13 @@ document.addEventListener("DOMContentLoaded", function() {
         message.style.display = 'none';
     }
     else {
-        button.addEventListener('click', e => {
+        button.addEventListener('submit', e => {
             if (input.value !== null && input.value !== '') {
                 userName = input.value;
                 localStorage.setItem('name', userName);
+                message.style.display = 'none';
             } else {
+                e.preventDefault()
                 input.style.borderColor = '$color';
                 input.style.placeholder = 'Proszę wprowadzić imię';
                 input.style.placeholder.color = 'tomato';
