@@ -1,10 +1,10 @@
 .header {
-  display: flex;
-  justify-content: center;
+
 }
 
 .first_navigation {
-  width: 80%;
+  width: 80vw;
+  margin: 0 auto;
   background-color: $colorNav;
   display: flex;
   justify-content: space-between;

@@ -1,0 +1,38 @@
+section {
+  display: flex;
+}
+
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin: 30px auto;
+
+
+}
+.article {
+  display: flex;
+  flex-direction: column;
+}
+
+.article_title {
+  font-size: 22px;
+  color: $colorHeader;
+  text-align: center;
+  margin: 10px auto;
+}
+
+.article_text {
+  color: #4a4a49;
+  font-size: 14px;
+  text-align: center;
+  margin: 10px auto;
+  padding: 20px;
+}
+
+.fas, .far {
+  font-size: 40px;
+  color: $colorHeader;
+  text-align: center;
+}
