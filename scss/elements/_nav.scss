@@ -9,7 +9,6 @@
   display: flex;
   justify-content: space-between;
   position: relative;
-  animation: logo_move 2s 1 alternate;
 }
 .navigation_logo {
   margin: 2rem;
@@ -47,14 +46,4 @@ display: flex;
 }
 .navigation_link:hover {
   color: $colorButtons;
-}
-@keyframes logo_move {
-  0% {
-    position: absolute;
-    top: -400px;
-  }
-100% {
-  position: absolute;
-  top: 0;
-}
 }
