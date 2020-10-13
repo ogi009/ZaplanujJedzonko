@@ -1,33 +1,25 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
+    const message = document.querySelector('#welcome_message')
+    const input = document.querySelector("#name_input");
+    const button = document.querySelector("#name_submit");
+    const user = document.querySelector("#user_name");
 
-        const arrowLeft = document.querySelector(".banner .fa-arrow-left");
-        const arrowRight = document.querySelector(".banner .fa-arrow-right");
-        const banner = document.querySelector(".banner_img");
-
-        const moveBanner = (target) => {
-            if(banner.scrollLeft % banner.children[0].width){
-                banner.scrollLeft = 0;
+    let userName;
+    if(localStorage.getItem('name' !== null)) {
+        userName = localStorage.getItem('name');
+        message.style.display = 'none';
+    }
+    else {
+        button.addEventListener('click', e => {
+            if (input.value !== null && input.value !== '') {
+                userName = input.value;
+                localStorage.setItem('name', userName);
+            } else {
+                input.style.borderColor = '$color';
+                input.style.placeholder = 'Proszę wprowadzić imię';
+                input.style.placeholder.color = 'tomato';
             }
-            const width = banner.children[0].width;
-
-            if (banner.scrollLeft === 0) {
-                target.className.includes('right') ?
-                    banner.scrollTo({left: width, behavior: 'smooth'})
-                    : banner.scrollTo({left: 2*width, behavior: 'smooth'})
-
-            } else if (banner.scrollLeft === width) {
-                target.className.includes('right') ?
-                    banner.scrollTo({left: 2*width, behavior: 'smooth'})
-                    : banner.scrollTo({left: 0, behavior: 'smooth'})
-
-            } else if (banner.scrollLeft === 2*width) {
-                target.className.includes('right') ?
-                    banner.scrollTo({left: 0, behavior: 'smooth'})
-                    : banner.scrollTo({left: width, behavior: 'smooth'})
-            }
-        }
-
-        arrowLeft.addEventListener('click', e => moveBanner(e.target));
-        arrowRight.addEventListener('click', e => moveBanner(e.target));
-
+        })
+    }
+    user.innerText = userName;
 });
