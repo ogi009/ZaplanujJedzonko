@@ -1,0 +1,20 @@
+
+.app {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  .first_row {
+    min-height: 8%;
+    background-color: blue;
+  }
+  .second_row {
+    min-height: 92%;
+    .col-2 {
+      background-color: tomato;
+    }
+    .col-10 {
+      background-color: black;
+    }
+  }
+
+}
