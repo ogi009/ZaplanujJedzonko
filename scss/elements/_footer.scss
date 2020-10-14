@@ -1,0 +1,78 @@
+
+footer {
+}
+
+.footerbox {
+  font-family: $fontOpenSans;
+  display: flex;
+  justify-content: space-around;
+  width: 100vw;
+  margin: 0 auto;
+  background-color: $colorNav;
+}
+
+.footer_list {
+  list-style: disc;
+  margin: auto;
+}
+
+.footerbox_article {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  margin: 0 auto;
+  color: white;
+}
+
+.footer_title {
+  font-size: 22px;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+.footer_text {
+  margin: 10px auto;
+  text-align: center;
+  font-size: 14px;
+}
+
+.fab {
+  color: white;
+  margin-top: 10px;
+  font-size: 15px;
+  padding: 10px;
+
+}
+
+.copyright {
+  font-family: $fontOpenSans;
+  width: 100vw;
+  height: 30px;
+  background-color: $colorHeader;
+  text-align: center;
+  color: white;
+  font-size: 10px;
+  margin: auto;
+  padding: 5px;
+}
+
+span {
+  color: $colorLogo;
+  font-size: 10px;
+  margin: auto;
+  padding: 5px;
+}
+
+.blank1 {
+  width: 80px;
+  margin: 0 auto;
+}
+
+.blank2 {
+  background-color: $colorLogo;
+  border: 1px solid $colorLogo;
+  color: white;
+  width: 80px;
+  margin: 0 auto;
+}
