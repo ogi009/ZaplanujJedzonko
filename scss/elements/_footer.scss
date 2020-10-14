@@ -1,13 +1,14 @@
 
 footer {
+  width: 80vw;
+  margin: 0 auto;
 }
 
 .footerbox {
   font-family: $fontOpenSans;
   display: flex;
   justify-content: space-around;
-  width: 100vw;
-  margin: 0 auto;
+  max-width: 100%;
   background-color: $colorNav;
 }
 
@@ -46,7 +47,7 @@ footer {
 
 .copyright {
   font-family: $fontOpenSans;
-  width: 100vw;
+  max-width: 100%;
   height: 30px;
   background-color: $colorHeader;
   text-align: center;

@@ -803,12 +803,16 @@ section {
   border: none;
 }
 
+footer {
+  width: 80vw;
+  margin: 0 auto;
+}
+
 .footerbox {
   font-family: "Open Sans", sans-serif;
   display: flex;
   justify-content: space-around;
-  width: 100vw;
-  margin: 0 auto;
+  max-width: 100%;
   background-color: #5B605F;
 }
 
@@ -847,7 +851,7 @@ section {
 
 .copyright {
   font-family: "Open Sans", sans-serif;
-  width: 100vw;
+  max-width: 100%;
   height: 30px;
   background-color: #4a4a49;
   text-align: center;
