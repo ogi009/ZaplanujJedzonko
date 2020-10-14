@@ -441,10 +441,6 @@ textarea {
   padding: 0.2em 0;
 }
 
-.d_none {
-  display: none;
-}
-
 .first_navigation {
   width: 80vw;
   margin: 0 auto;
@@ -1021,5 +1017,21 @@ footer {
   font-family: "Open Sans", sans-serif;
   padding: 10px 30px;
   border: none;
+}
+
+.d_none {
+  display: none;
+}
+
+.placeholder_red::-moz-placeholder {
+  color: tomato;
+}
+
+.placeholder_red:-ms-input-placeholder {
+  color: tomato;
+}
+
+.placeholder_red::placeholder {
+  color: tomato;
 }
 /*# sourceMappingURL=main.css.map */

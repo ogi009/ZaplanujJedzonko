@@ -1,3 +1,6 @@
 .d_none{
 display: none;
 }
+.placeholder_red::placeholder {
+  color: tomato;
+}
