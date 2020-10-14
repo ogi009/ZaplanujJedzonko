@@ -1,0 +1,53 @@
+.welcome_page {
+  background-color: $colorBackground;
+  border: 2px dotted $colorHeader;
+  height: 90%;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+.welcome_page_content {
+  margin: 40px;
+  text-align: center;
+
+}
+.welcome_page_greet {
+  font-family: $fontOpenSans;
+  font-size: 50px;
+  font-weight: bold;
+  margin: 20px;
+  color: $colorNav;
+}
+.welcome_page_greet2 {
+  font-family: $fontOpenSans;
+  font-size: 40px;
+  font-weight: bold;
+  margin: 20px;
+  color: $colorNav;
+}
+
+.welcome_page_input {
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+  padding: 10px;
+}
+.welcome_page_button {
+  margin: 20px;
+}
+.welcome_page_text {
+  font-size: 35px;
+  color: $colorNav;
+  font-family: $fontOpenSans;
+}
+.welcome_page_button {
+  background-color: $colorButtons;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  font-family: $fontOpenSans;
+  padding: 10px 30px;
+  border: none;
+}
