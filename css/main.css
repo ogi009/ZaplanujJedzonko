@@ -766,4 +766,39 @@ section {
   font-family: "Open Sans", sans-serif;
   font-size: 20px;
 }
+
+.newsletter {
+  box-sizing: border-box;
+  padding: 0 100px;
+  width: 80vw;
+  height: 120px;
+  margin: 0 auto;
+  background-color: #5B605F;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+}
+.newsletter .newsletter__box {
+  width: 70%;
+}
+.newsletter h3 {
+  font-size: 36px;
+  font-weight: 600;
+}
+.newsletter .newsletter__form {
+  display: flex;
+}
+.newsletter .newsletter__form .newsletter__input {
+  padding: 15px 5px;
+  width: 300px;
+}
+.newsletter .newsletter__form button {
+  background-color: #FF6600;
+  color: white;
+  font-weight: 700;
+  padding: 15px 40px;
+  border: none;
+}
 /*# sourceMappingURL=main.css.map */
