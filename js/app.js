@@ -14,7 +14,6 @@ document.addEventListener("DOMContentLoaded", function () {
         gridPlan.classList.remove("d_none");
         user.innerText = userName;
     } else {
-
         form.addEventListener('submit', e => {
             e.preventDefault();
             if (input.value !== null && input.value !== '') {
