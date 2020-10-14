@@ -1,0 +1,59 @@
+.grid_plan {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  gap: 15px;
+
+  height: 90%;
+  width: 90%;
+  margin: 40px auto 0;
+  padding: 1em;
+}
+
+.add_recipt {
+  background-color: blue;
+  grid-column: 1 / 4;
+  grid-row: 1 / 4;
+  background-color: $colorBackground;
+  border: 2px dotted $colorHeader;
+}
+
+.add_plan {
+  background-color: blue;
+  grid-column: 4 / 7;
+  grid-row: 1 / 4;
+  background-color: $colorBackground;
+  border: 2px dotted $colorHeader;
+}
+
+.notification_recipt {
+  background-color: blue;
+  grid-column: 7 / 13;
+  grid-row: 1 / 2;
+  background-color: $colorBackground;
+  border: 2px dotted $colorHeader;
+}
+
+.notification_plan {
+  background-color: blue;
+  grid-column: 7 / 13;
+  grid-row: 2/3;
+  background-color: $colorBackground;
+  border: 2px dotted $colorHeader;
+}
+
+.notification_bonapetit {
+  background-color: blue;
+  grid-column: 7 / 13;
+  grid-row: 3 / 4;
+  background-color: $colorBackground;
+  border: 2px dotted $colorHeader;
+}
+
+.week_plan {
+  background-color: blue;
+  grid-column: 1 / 13;
+  grid-row: 4 / 13;
+  background-color: $colorBackground;
+  border: 2px dotted $colorHeader;
+}
