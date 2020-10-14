@@ -492,11 +492,10 @@ section {
 .footer_list {
   list-style: disc;
   margin: auto;
+  margin-bottom: 10px;
 }
 
 .footerbox_article {
-  display: flex;
-  flex-direction: column;
   width: 25%;
   margin: 0 auto;
   color: white;
@@ -518,8 +517,9 @@ section {
 .fab {
   color: white;
   margin-top: 10px;
-  font-size: 15px;
+  font-size: 35px;
   padding: 10px;
+  text-align: left;
 }
 
 .copyright {
@@ -530,8 +530,8 @@ section {
   text-align: center;
   color: white;
   font-size: 10px;
-  margin: auto;
   padding: 5px;
+  line-height: 20px;
 }
 
 span {
@@ -543,7 +543,6 @@ span {
 
 .blank1 {
   width: 80px;
-  margin: 0 auto;
 }
 
 .blank2 {
@@ -551,6 +550,5 @@ span {
   border: 1px solid #E58A20;
   color: white;
   width: 80px;
-  margin: 0 auto;
 }
 /*# sourceMappingURL=main.css.map */
