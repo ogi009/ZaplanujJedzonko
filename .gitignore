@@ -3,3 +3,4 @@ node_modules
 *.iml
 css
 main.css.map
+debug.log
