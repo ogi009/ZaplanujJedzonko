@@ -11,30 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (+banner.scrollLeft.toFixed(0) % width) {
             banner.scrollLeft = 0;
-        }        let width = banner.children[0].width
-        width = +width.toFixed(0);
-
-        if (+banner.scrollLeft.toFixed(0) % width) {
-            banner.scrollLeft = 0;
         }
-
-        if (banner.scrollLeft === 0) {
-            target.className.includes('right') ?
-                banner.scrollTo({left: width.toFixed(0), behavior: 'smooth'})
-                : banner.scrollTo({left: 2 * width, behavior: 'smooth'})
-
-        } else if (+banner.scrollLeft.toFixed(0) === width) {
-            target.className.includes('right') ?
-                banner.scrollTo({left: 2 * width, behavior: 'smooth'})
-                : banner.scrollTo({left: 0, behavior: 'smooth'})
-
-        } else if (+banner.scrollLeft.toFixed(0) === 2 * width) {
-            target.className.includes('right') ?
-                banner.scrollTo({left: 0, behavior: 'smooth'})
-                : banner.scrollTo({left: width, behavior: 'smooth'})
-        }
-    }
-
 
         if (banner.scrollLeft === 0) {
             target.className.includes('right') ?
