@@ -1,0 +1,43 @@
+
+.newsletter {
+  box-sizing: border-box;
+  padding: 0 100px;
+
+  width: 80vw;
+  height: 120px;
+  margin: 0 auto;
+  background-color: $colorNav;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-family: $fontOpenSans;
+
+
+  .newsletter__box {
+    width: 70%;
+  }
+
+  h3 {
+    font-size: 36px;
+    font-weight: 600
+  }
+
+  .newsletter__form {
+    display: flex;
+
+    .newsletter__input {
+      padding: 15px 5px;
+      width: 300px;
+    }
+
+    button {
+      background-color: $colorButtons;
+      color: white;
+      font-weight: 700;
+      padding: 15px 40px;
+      border: none;
+    }
+
+  }
+}

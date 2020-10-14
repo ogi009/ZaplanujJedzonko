@@ -1,0 +1,32 @@
+.about_author {
+  margin: 0 auto;
+  width: 80vw;
+  display: flex;
+  justify-content: space-around;
+  background-color: $colorBackground;
+
+}
+.author_photo {
+  height: 300px;
+  width: 300px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-right: 25px;
+  margin-left: 70px;
+}
+.about_author_container {
+  width: 50%;
+  margin-top: 25px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.about_author_title {
+  font-size: 35px;
+  font-family: $fontOpenSans;
+  margin-bottom: 20px;
+}
+.about_author_text {
+  font-family: $fontOpenSans;
+  font-size: 20px;
+}
