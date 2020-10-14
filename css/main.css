@@ -561,6 +561,7 @@ section {
 }
 
 .container {
+  font-family: "Open Sans", sans-serif;
   display: flex;
   justify-content: space-around;
   width: 80%;
@@ -800,5 +801,81 @@ section {
   font-weight: 700;
   padding: 15px 40px;
   border: none;
+}
+
+footer {
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.footerbox {
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  justify-content: space-around;
+  max-width: 100%;
+  background-color: #5B605F;
+}
+
+.footer_list {
+  list-style: disc;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.footerbox_article {
+  width: 25%;
+  margin: 0 auto;
+  color: white;
+}
+
+.footer_title {
+  font-size: 22px;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+.footer_text {
+  margin: 10px auto;
+  text-align: center;
+  font-size: 14px;
+}
+
+.fab {
+  color: white;
+  margin-top: 10px;
+  font-size: 35px;
+  padding: 10px;
+  text-align: left;
+}
+
+.copyright {
+  font-family: "Open Sans", sans-serif;
+  max-width: 100%;
+  height: 30px;
+  background-color: #4a4a49;
+  text-align: center;
+  color: white;
+  font-size: 10px;
+  padding: 5px;
+  line-height: 20px;
+}
+
+span {
+  color: #E58A20;
+  font-size: 10px;
+  margin: auto;
+  padding: 5px;
+}
+
+.blank1 {
+  width: 80px;
+}
+
+.blank2 {
+  background-color: #E58A20;
+  border: 1px solid #E58A20;
+  color: white;
+  width: 80px;
 }
 /*# sourceMappingURL=main.css.map */
