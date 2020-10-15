@@ -1,5 +1,7 @@
 import allRecipies from "./recipe.js";
 import {allPlans,Schedule} from "./schedule.js";
+import {verification} from "./inputVerifaction.js";
+
 document.addEventListener("DOMContentLoaded", function () {
 
 
@@ -30,63 +32,68 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     save.addEventListener('click', e => {
-        var newPlan = new Schedule(allPlans.length + 1, weekNumber.value, planTitle.value, planDescription.value);
-        console.log(monday.children[1].children[0].value);
-        newPlan.monday = [
-            monday.children[1].children[0].value,
-            monday.children[2].children[0].value,
-            monday.children[3].children[0].value,
-            monday.children[4].children[0].value,
-            monday.children[5].children[0].value,
-        ];
-        newPlan.tuesday = [
-            tuesday.children[1].children[0].value,
-            tuesday.children[2].children[0].value,
-            tuesday.children[3].children[0].value,
-            tuesday.children[4].children[0].value,
-            tuesday.children[5].children[0].value,
-        ];
-        newPlan.wednesday = [
-            wednesday.children[1].children[0].value,
-            wednesday.children[2].children[0].value,
-            wednesday.children[3].children[0].value,
-            wednesday.children[4].children[0].value,
-            wednesday.children[5].children[0].value,
-        ];
-        newPlan.thursday = [
-            thursday.children[1].children[0].value,
-            thursday.children[2].children[0].value,
-            thursday.children[3].children[0].value,
-            thursday.children[4].children[0].value,
-            thursday.children[5].children[0].value,
-        ];
-        newPlan.friday = [
-            friday.children[1].children[0].value,
-            friday.children[2].children[0].value,
-            friday.children[3].children[0].value,
-            friday.children[4].children[0].value,
-            friday.children[5].children[0].value,
-        ];
-        newPlan.saturday = [
-            saturday.children[1].children[0].value,
-            saturday.children[2].children[0].value,
-            saturday.children[3].children[0].value,
-            saturday.children[4].children[0].value,
-            saturday.children[5].children[0].value,
-        ];
-        newPlan.sunday = [
-            sunday.children[1].children[0].value,
-            sunday.children[2].children[0].value,
-            sunday.children[3].children[0].value,
-            sunday.children[4].children[0].value,
-            sunday.children[5].children[0].value,
-        ];
+        if(weekNumber.value && planDescription.value && planTitle.value) {
+            const newPlan = new Schedule(allPlans.length + 1, weekNumber.value, planTitle.value, planDescription.value);
+            newPlan.monday = [
+                monday.children[1].children[0].value,
+                monday.children[2].children[0].value,
+                monday.children[3].children[0].value,
+                monday.children[4].children[0].value,
+                monday.children[5].children[0].value,
+            ];
+            newPlan.tuesday = [
+                tuesday.children[1].children[0].value,
+                tuesday.children[2].children[0].value,
+                tuesday.children[3].children[0].value,
+                tuesday.children[4].children[0].value,
+                tuesday.children[5].children[0].value,
+            ];
+            newPlan.wednesday = [
+                wednesday.children[1].children[0].value,
+                wednesday.children[2].children[0].value,
+                wednesday.children[3].children[0].value,
+                wednesday.children[4].children[0].value,
+                wednesday.children[5].children[0].value,
+            ];
+            newPlan.thursday = [
+                thursday.children[1].children[0].value,
+                thursday.children[2].children[0].value,
+                thursday.children[3].children[0].value,
+                thursday.children[4].children[0].value,
+                thursday.children[5].children[0].value,
+            ];
+            newPlan.friday = [
+                friday.children[1].children[0].value,
+                friday.children[2].children[0].value,
+                friday.children[3].children[0].value,
+                friday.children[4].children[0].value,
+                friday.children[5].children[0].value,
+            ];
+            newPlan.saturday = [
+                saturday.children[1].children[0].value,
+                saturday.children[2].children[0].value,
+                saturday.children[3].children[0].value,
+                saturday.children[4].children[0].value,
+                saturday.children[5].children[0].value,
+            ];
+            newPlan.sunday = [
+                sunday.children[1].children[0].value,
+                sunday.children[2].children[0].value,
+                sunday.children[3].children[0].value,
+                sunday.children[4].children[0].value,
+                sunday.children[5].children[0].value,
+            ];
 
-
-        allPlans.push(newPlan);
-        mainPanel.classList.remove('d_none');
-        schedulePanel.classList.add('d_none');
-
-        allPlans[0].showPlan();
+            allPlans.push(newPlan);
+            newPlan.saveToLocalStorage();
+            console.log(localStorage);
+            mainPanel.classList.remove('d_none');
+            schedulePanel.classList.add('d_none');
+        }
+        else {
+            weekNumber.value ? null:verification(weekNumber,'Nr');
+            planTitle.value ? null : verification(planTitle,'Proszę wprowadzić tytuł planu');
+            planDescription.value ? null : verification(planDescription,'Proszę wprowadzić opis planu');
+        }
     })
 });

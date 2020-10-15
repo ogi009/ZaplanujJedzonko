@@ -22,16 +22,17 @@ export function Schedule(id, weekNumber, title, description) {
     this.saturday = []; // plan na sobotę
     this.sunday = []; // plan na niedzielę
 }
+
 /* Metoda `.showPlan()`
     wyświetlająca plan na ekranie aplikacji
  */
 Schedule.prototype.showPlan = function () {
 
-        const weekPlanTitle = document.querySelector(".week_plan_title");
-        weekPlanTitle.innerText = `Twój plan na ${this.weekNumber} tydzień`;
+    const weekPlanTitle = document.querySelector(".week_plan_title");
+    weekPlanTitle.innerText = `Twój plan na ${this.weekNumber} tydzień`;
 
-        const weekPlan = document.querySelector("#schedule_table");
-        weekPlan.innerHTML = `      
+    const weekPlan = document.querySelector("#schedule_table");
+    weekPlan.innerHTML = `      
         <tr class="week_plan-breakfast">
             <td>${this.monday[0]}</td>
             <td>${this.tuesday[0]}</td>
@@ -97,11 +98,13 @@ Schedule.prototype.showInfo = function () {
 Metoda `.saveToLocalStorage()`
 zapisująca do localStorage informacje o przepisie */
 Schedule.prototype.saveToLocalStorage = function () {
-        /* if(){
+    let array = [this.id,this.title,this.description,this.weekNumber,this.monday,this.tuesday,this.wednesday,this.thursday,
+    this.friday,this.saturday,this.sunday]
+    if (localStorage.getItem(`Plan ${this.id}` !== null)) {
 
-      }else{
-
-      } */
+    } else {
+        localStorage.setItem(`'Plan ${this.id}'`,array);
+    }
 }
 
 // przygotowanie globalnej zmiennej przechowującej wszystkie plany
