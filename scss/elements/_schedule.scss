@@ -47,7 +47,7 @@
 
   .input {
     grid-column: 4/12;
-    text-align: center;
+    font-size: 0.8em;
   }
 
   .plan_description-text {
@@ -61,6 +61,7 @@
   .plan_weekNumber-input {
     text-align: center;
     width: 1.7em;
+    font-size: 0.8em;
   }
 }
 
@@ -80,7 +81,6 @@
     font-weight: bold;
     text-align: left;
   }
-
   thead {
     font-weight: bold;
     border-top: 1px solid $colorText;
