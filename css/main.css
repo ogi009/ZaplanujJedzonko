@@ -441,6 +441,10 @@ textarea {
   padding: 0.2em 0;
 }
 
+.d_none {
+  display: none;
+}
+
 .first_navigation {
   width: 80vw;
   margin: 0 auto;
@@ -693,6 +697,7 @@ section {
 }
 
 .add_recipt {
+  background-color: blue;
   grid-column: 1/4;
   grid-row: 1/4;
   background-color: #FFFFFA;
@@ -700,6 +705,7 @@ section {
 }
 
 .add_plan {
+  background-color: blue;
   grid-column: 4/7;
   grid-row: 1/4;
   background-color: #FFFFFA;
@@ -747,6 +753,7 @@ section {
 }
 
 .notification_bonapetit {
+  background-color: blue;
   grid-column: 7/13;
   grid-row: 3/4;
   background-color: #FFFFFA;
@@ -780,6 +787,7 @@ section {
 }
 
 .week_plan {
+  background-color: blue;
   grid-column: 1/13;
   grid-row: 4/13;
   background-color: #FFFFFA;
@@ -1063,6 +1071,237 @@ footer {
   font-family: "Open Sans", sans-serif;
   padding: 10px 30px;
   border: none;
+}
+
+.week_plan {
+  font-size: 1.5em;
+  font-family: "Open Sans", sans-serif;
+  padding: 1em;
+  width: 100%;
+}
+
+.week_plan_title {
+  max-width: 100%;
+  text-align: center;
+  color: #FF6600;
+  padding: 0.7em;
+  border-bottom: 0.01em solid #6b716f;
+  font-weight: bold;
+}
+
+.week_plan_table {
+  width: 100%;
+  height: 70%;
+  margin: 0 auto;
+  padding: 0.7em;
+  text-align: center;
+  color: #6b716f;
+}
+.week_plan_table .table-head {
+  color: #4a4a49;
+  font-size: 1.1em;
+  font-weight: bold;
+  border-bottom: 0.01em solid #6b716f;
+}
+.week_plan_table .table-head th {
+  padding: 0.5em;
+  max-width: 10%;
+}
+.week_plan_table td {
+  padding: 0.7em;
+}
+.week_plan_table tr {
+  border-bottom: 0.01em solid #5B605F;
+}
+
+.week_plan_buttons {
+  max-width: 100%;
+  height: 3em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #FF6600;
+}
+.week_plan_buttons span {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.week_plan_buttons i {
+  color: #FF6600;
+  margin: 0 5px;
+}
+
+.grid_plan2 {
+  background-color: #FFFFFA;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 50px 20px 1fr 1fr 1fr;
+  gap: 10px;
+  height: 90%;
+  width: 90%;
+  margin: 40px auto 0;
+  padding: 2em;
+}
+
+.el1 {
+  grid-column: 1/13;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 4px solid #A1A194;
+  padding-bottom: 5px;
+  height: 50px;
+}
+
+.el2 {
+  grid-column: 1/13;
+  grid-row: 2/4;
+  margin: 5px;
+}
+
+.el3 {
+  grid-column: 1/6;
+  grid-row: 4/6;
+}
+
+.el4 {
+  grid-column: 6/13;
+  grid-row: 4/6;
+  margin-left: 20px;
+}
+
+.new_recipe_title {
+  font-family: "Open Sans", sans-serif;
+  font-size: 25px;
+  color: #FF6600;
+  font-weight: bold;
+  align-self: flex-end;
+}
+
+.new_recipe_button {
+  background-color: #FF6600;
+  padding: 10px;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  height: 40px;
+  align-self: flex-end;
+  margin-right: 10px;
+}
+
+.new_recipe_name {
+  display: inline-block;
+  font-family: "Open Sans", sans-serif;
+  color: #5B605F;
+  font-size: 25px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.new_recipe_description {
+  display: inline-block;
+  font-family: "Open Sans", sans-serif;
+  color: #5B605F;
+  font-size: 25px;
+  margin-right: 45px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.new_recipe_input1 {
+  width: 80%;
+  resize: none;
+  padding: 10px;
+}
+
+.new_recipe_input2 {
+  width: 80%;
+  margin-top: 10px;
+  resize: none;
+  height: 120px;
+  padding: 10px;
+}
+
+.instructions {
+  font-family: "Open Sans", sans-serif;
+  color: #5B605F;
+  width: 95%;
+  font-size: 25px;
+  border-bottom: 3px solid #5B605F;
+  margin: 5px;
+  padding: 5px;
+}
+
+.textarea_instrcions {
+  resize: none;
+  width: 80%;
+  margin: 10px;
+  height: 100px;
+  font-style: "Open Sans", sans-serif;
+  padding: 10px;
+}
+
+.button,
+.button2 {
+  background-color: green;
+  border-radius: 10px;
+  margin: 10px;
+  border: none;
+}
+
+.fas {
+  color: white;
+}
+
+.ingridients {
+  font-family: "Open Sans", sans-serif;
+  color: #5B605F;
+  width: 95%;
+  font-size: 25px;
+  border-bottom: 3px solid #5B605F;
+  margin: 5px;
+  padding: 5px;
+}
+
+.textarea_indigirends {
+  resize: none;
+  width: 80%;
+  font-style: "Open Sans", sans-serif;
+  margin-top: 10px;
+  height: 50px;
+  padding: 10px;
+}
+
+.recipes_container {
+  width: 500px;
+  height: 250px;
+  padding: 20px;
+  overflow: auto;
+}
+
+.indigirends_container {
+  margin-top: 53px;
+  width: 700px;
+  height: 250px;
+  box-sizing: border-box;
+  padding: 20px;
+  overflow: auto;
+}
+
+.d_none {
+  display: none;
+}
+
+.placeholder_red::-moz-placeholder {
+  color: tomato;
+}
+
+.placeholder_red:-ms-input-placeholder {
+  color: tomato;
+}
+
+.placeholder_red::placeholder {
+  color: tomato;
 }
 
 .week_plan {
