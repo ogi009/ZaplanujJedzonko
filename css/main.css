@@ -445,6 +445,18 @@ textarea {
   display: none;
 }
 
+.placeholder_red::-moz-placeholder {
+  color: tomato;
+}
+
+.placeholder_red:-ms-input-placeholder {
+  color: tomato;
+}
+
+.placeholder_red::placeholder {
+  color: tomato;
+}
+
 .first_navigation {
   width: 80vw;
   margin: 0 auto;
@@ -697,7 +709,6 @@ section {
 }
 
 .add_recipt {
-  background-color: blue;
   grid-column: 1/4;
   grid-row: 1/4;
   background-color: #FFFFFA;
@@ -705,7 +716,6 @@ section {
 }
 
 .add_plan {
-  background-color: blue;
   grid-column: 4/7;
   grid-row: 1/4;
   background-color: #FFFFFA;
@@ -753,7 +763,6 @@ section {
 }
 
 .notification_bonapetit {
-  background-color: blue;
   grid-column: 7/13;
   grid-row: 3/4;
   background-color: #FFFFFA;
@@ -787,7 +796,6 @@ section {
 }
 
 .week_plan {
-  background-color: blue;
   grid-column: 1/13;
   grid-row: 4/13;
   background-color: #FFFFFA;
@@ -1132,6 +1140,81 @@ footer {
   margin: 0 5px;
 }
 
+.d_none {
+  display: none;
+}
+
+.placeholder_red::-moz-placeholder {
+  color: tomato;
+}
+
+.placeholder_red:-ms-input-placeholder {
+  color: tomato;
+}
+
+.placeholder_red::placeholder {
+  color: tomato;
+}
+
+.week_plan {
+  font-size: 1.5em;
+  font-family: "Open Sans", sans-serif;
+  padding: 1em;
+  width: 100%;
+}
+
+.week_plan_title {
+  max-width: 100%;
+  text-align: center;
+  color: #FF6600;
+  padding: 0.7em;
+  border-bottom: 0.01em solid #6b716f;
+  font-weight: bold;
+}
+
+.week_plan_table {
+  width: 100%;
+  height: 70%;
+  margin: 0 auto;
+  padding: 0.7em;
+  text-align: center;
+  color: #6b716f;
+}
+.week_plan_table .table-head {
+  color: #4a4a49;
+  font-size: 1.1em;
+  font-weight: bold;
+  border-bottom: 0.01em solid #6b716f;
+}
+.week_plan_table .table-head th {
+  padding: 0.5em;
+  max-width: 10%;
+}
+.week_plan_table td {
+  padding: 0.7em;
+}
+.week_plan_table tr {
+  border-bottom: 0.01em solid #5B605F;
+}
+
+.week_plan_buttons {
+  max-width: 100%;
+  height: 3em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #FF6600;
+}
+.week_plan_buttons span {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.week_plan_buttons i {
+  color: #FF6600;
+  margin: 0 5px;
+}
+
 .grid_plan2 {
   background-color: #FFFFFA;
   display: grid;
@@ -1286,81 +1369,6 @@ footer {
   box-sizing: border-box;
   padding: 20px;
   overflow: auto;
-}
-
-.d_none {
-  display: none;
-}
-
-.placeholder_red::-moz-placeholder {
-  color: tomato;
-}
-
-.placeholder_red:-ms-input-placeholder {
-  color: tomato;
-}
-
-.placeholder_red::placeholder {
-  color: tomato;
-}
-
-.week_plan {
-  font-size: 1.5em;
-  font-family: "Open Sans", sans-serif;
-  padding: 1em;
-  width: 100%;
-}
-
-.week_plan_title {
-  max-width: 100%;
-  text-align: center;
-  color: #FF6600;
-  padding: 0.7em;
-  border-bottom: 0.01em solid #6b716f;
-  font-weight: bold;
-}
-
-.week_plan_table {
-  width: 100%;
-  height: 70%;
-  margin: 0 auto;
-  padding: 0.7em;
-  text-align: center;
-  color: #6b716f;
-}
-.week_plan_table .table-head {
-  color: #4a4a49;
-  font-size: 1.1em;
-  font-weight: bold;
-  border-bottom: 0.01em solid #6b716f;
-}
-.week_plan_table .table-head th {
-  padding: 0.5em;
-  max-width: 10%;
-}
-.week_plan_table td {
-  padding: 0.7em;
-}
-.week_plan_table tr {
-  border-bottom: 0.01em solid #5B605F;
-}
-
-.week_plan_buttons {
-  max-width: 100%;
-  height: 3em;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: #FF6600;
-}
-.week_plan_buttons span {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
-.week_plan_buttons i {
-  color: #FF6600;
-  margin: 0 5px;
 }
 
 .d_none {
