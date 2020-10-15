@@ -43,33 +43,21 @@
             <div class="grid_plan d_none">
                 <div class="add_recipt"></div>
                 <div class="add_plan"></div>
-                <div class="notification_recipt">
-                    <i class="fas fa-info-circle"></i>
-                    <h3>Masz już 99 przepisów, nieźle!</h3>
-                    <i class="fas fa-window-close"></i>
-                </div>
-                <div class="notification_plan">
-                    <i class="fas fa-exclamation-circle"></i>
-                    <h3>Pamiętaj, aby dodać plan!</h3>
-                    <i class="fas fa-window-close"></i>
-                </div>
-                <div class="notification_bonapetit">
-                    <i class="fas fa-check-circle"></i>
-                    <h3>Świetnie że jesteś! Udanego planowania i samcznego! :)</h3>
-                    <i class="fas fa-window-close"></i>
-                </div>
+                <div class="notification_recipt"></div>
+                <div class="notification_plan"></div>
+                <div class="notification_bonapetit"></div>
                 <div class="week_plan">
                     <p class="week_plan_title"></p>
                     <table class="week_plan_table">
                         <thead class="table-head">
                         <tr>
-                        <th>Poniedziałek</th>
-                        <th>Wtorek</th>
-                        <th>Środa</th>
-                        <th>Czwartek</th>
-                        <th>Piątek</th>
-                        <th>Sobota</th>
-                        <th>Niedziela</th>
+                            <th>Poniedziałek</th>
+                            <th>Wtorek</th>
+                            <th>Środa</th>
+                            <th>Czwartek</th>
+                            <th>Piątek</th>
+                            <th>Sobota</th>
+                            <th>Niedziela</th>
                         </tr>
                         </thead>
                         <tbody class="table-body" id="schedule_table">
@@ -81,44 +69,126 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
-
-
-            <div class="container_recipe grid_plan2">
-                <div class="el el1">
-                    <h1 class="new_recipe_title">NOWY PRZEPIS</h1>
-                    <button class="new_recipe_button">Zapisz i zamknij</button>
+            <div class="schedule_plan">
+                <!--                //d_none">-->
+                <div class="plan_header">
+                    <h3 class="schedule_plan-title">NOWY PLAN</h3>
+                    <button class="schedule_plan-save">Zapisz i zamknij</button>
                 </div>
-                <div class="el el2">
-                    <h2 class="new_recipe_name">Nazwa przepisu</h2>
-                    <label for="recipe_name"></label>
-                    <textarea id="recipe_name" class="new_recipe_input1" rows="1"></textarea><br>
-                    <h2 class="new_recipe_description">Opis Przepisu</h2>
-                    <label for="texarea_decription"></label>
-                    <textarea id="texarea_decription" class="new_recipe_input2"></textarea>
+                <div class="plan_content d_grid">
+                    <h3 class="plan_name-text text">Nazwa planu</h3>
+                    <input class="plan_name-input input">
+                    <h3 class="plan_description-text text">Opis planu</h3>
+                    <input class="plan_description-input input">
+                    <h3 class="plan_weekNumber-text text">Numer tygodnia</h3>
+                    <input class="plan_weekNumber-input">
                 </div>
-                <div class="el el3">
-                    <h1 class="instructions">INSTRUCKJE</h1>
-                    <textarea name="recipe_instructions" id="recipce_instructions"
-                              class="textarea_instrcions"></textarea>
-                    <button class="button"><i class="fas fa-plus"></i></button>
-                    <div class="recipes_container"></div>
-                </div>
-                <div class="el el4">
-                    <h1 class="ingridients">SKŁADNIKI</h1>
-                    <textarea name="recipe_ingridients" id="recipce_ingridients"
-                              class="textarea_indigirends"></textarea>
-                    <button class="button2"><i class="fas fa-plus"></i></button>
-                    <div class="indigirends_container"></div>
-                </div>
-
+                <table class="plan_table">
+                    <thead>
+                    <tr>
+                        <th></th>
+                        <th>ŚNIADANIE</th>
+                        <th>DRUGIE ŚNIADANIE</th>
+                        <th>ZUPA</th>
+                        <th>DRUGIE DANIE</th>
+                        <th>KOLACJA</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="bold">PONIEDZIAŁEK</td>
+                        <td>
+                            <select class="recipe_select" size="5">
+                            </select>
+                        </td>
+                        <td><select class="recipe_select" size="5">
+                        </select></td>
+                        <td><select class="recipe_select" size="5">
+                        </select></td>
+                        <td><select class="recipe_select" size="5">
+                        </select></td>
+                        <td><select class="recipe_select" size="5">
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td class="bold">WTOREK</td>
+                        <td><select class="recipe_select" size="5">
+                        </select></td>
+                        <td><select class="recipe_select" size="5">
+                        </select></td>
+                        <td><select class="recipe_select" size="5">
+                        </select></td>
+                        <td><select class="recipe_select" size="5">
+                        </select></td>
+                        <td><select class="recipe_select" size="5">
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td class="bold">ŚRODA</td>
+                        <td><select class="recipe_select" size="5">
+                        </select></td>
+                        <td><select class="recipe_select" size="5">
+                        </select></td>
+                        <td><select class="recipe_select" size="5">
+                        </select></td>
+                        <td><select class="recipe_select" size="5">
+                        </select></td>
+                        <td><select class="recipe_select" size="5">
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td class="bold">CZWARTEK</td>
+                        <td><select class="recipe_select" size="5">
+                        </select></td>
+                        <td><select class="recipe_select" size="5">
+                        </select></td>
+                        <td><select class="recipe_select" size="5">
+                        </select></td>
+                        <td><select class="recipe_select" size="5">
+                        </select></td>
+                        <td><select class="recipe_select" size="5">
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td class="bold">PIĄTEK</td>
+                        <td><select class="recipe_select" size="5">
+                        </select></td>
+                        <td><select class="recipe_select" size="5">
+                        </select></td>
+                        <td><select class="recipe_select" size="5">
+                        </select></td>
+                        <td><select class="recipe_select" size="5">
+                        </select></td>
+                        <td><select class="recipe_select" size="5">
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td class="bold">SOBOTA</td>
+                        <td><select class="recipe_select" size="5">
+                        </select></td>
+                        <td><select class="recipe_select" size="5">
+                        </select></td>
+                        <td><select class="recipe_select" size="5">
+                        </select></td>
+                        <td><select class="recipe_select" size="5">
+                        </select></td>
+                        <td><select class="recipe_select" size="5">
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td class="bold">NIEDZIELA</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
 </div>
-
 
 <script src="js/schedule.js"></script>
 <script src="js/app.js"></script>
