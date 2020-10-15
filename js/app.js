@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const input = document.querySelector("#name_input");
     const form = document.querySelector("#name_form");
     const user = document.querySelector("#user_name");
-    const gridPlan = document.querySelector(".grid_plan");
+    const gridPlan = document.querySelector(".grid_pgitlan");
 
     let userName;
 
