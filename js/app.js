@@ -1,14 +1,17 @@
 document.addEventListener("DOMContentLoaded", function () {
+
     const message = document.querySelector('#welcome_message')
     const input = document.querySelector("#name_input");
-    const form = document.querySelector("#form");
+    const form = document.querySelector("#name_form");
     const user = document.querySelector("#user_name");
     const gridPlan = document.querySelector(".grid_plan");
 
     let userName;
-    if (localStorage.getItem('name' !== null)) {
+
+    if (localStorage.getItem('name') !== null) {
         userName = localStorage.getItem('name');
-        message.style.display = 'none';
+        message.classList.add("d_none");
+        gridPlan.classList.remove("d_none");
         user.innerText = userName;
     } else {
         form.addEventListener('submit', e => {
@@ -17,14 +20,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 userName = input.value;
                 localStorage.setItem('name', userName);
                 user.innerText = userName;
-                message.classList.add("d_none")
-                gridPlan.classList.remove("d_none")
-
+                message.classList.add("d_none");
+                gridPlan.classList.remove("d_none");
             } else {
-                input.style.borderColor = '$color';
-                input.style.placeholder = 'Proszę wprowadzić imię';
-                input.style.placeholder.color = 'tomato';
-                user.innerText = userName;
+                input.style.border = `1px solid tomato`;
+                input.setAttribute('placeholder','Proszę wprowadzić imię');
+                input.classList.add('placeholder_red');
             }
         })
     }

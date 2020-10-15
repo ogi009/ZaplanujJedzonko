@@ -31,29 +31,61 @@
                 <div class="welcome_page_content">
                     <h1 class="welcome_page_greet">Witaj,</h1>
                     <h2 class="welcome_page_greet2">wygląda na to, że jesteś tu <br>pierwszy raz</h2>
-                    <form id="form">
-                        <label for="name_input"></label>
+                    <form id="name_form">
                         <input type="text" id="name_input" class="welcome_page_input"
-                               placeholder="tu wpisz jak masz na imię">
+                               placeholder="Tu wpisz jak masz na imię">
                         <button type="submit" id="name_submit" class="welcome_page_button">Gotowe!</button>
                     </form>
-                    <p class="welcome_page_text">Podaj nam swoję imię, a my zoorganizujemy <br>dla Ciebie naszą
-                        aplikację;)</p>
+                    <p class="welcome_page_text">Podaj nam swoję imię, a my zoorganizujemy <br>
+                        dla Ciebie naszą aplikację;)</p>
                 </div>
             </div>
             <div class="grid_plan d_none">
                 <div class="add_recipt"></div>
                 <div class="add_plan"></div>
-                <div class="notification_recipt"></div>
-                <div class="notification_plan"></div>
-                <div class="notification_bonapetit"></div>
-                <div class="week_plan"></div>
+                <div class="notification_recipt">
+                    <i class="fas fa-info-circle"></i>
+                    <h3>Masz już 99 przepisów, nieźle!</h3>
+                    <i class="fas fa-window-close"></i>
+                </div>
+                <div class="notification_plan">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <h3>Pamiętaj, aby dodać plan!</h3>
+                    <i class="fas fa-window-close"></i>
+                </div>
+                <div class="notification_bonapetit">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Świetnie że jesteś! Udanego planowania i samcznego! :)</h3>
+                    <i class="fas fa-window-close"></i>
+                </div>
+                <div class="week_plan">
+                    <p class="week_plan_title"></p>
+                    <table class="week_plan_table">
+                        <thead class="table-head">
+                        <tr>
+                        <th>Poniedziałek</th>
+                        <th>Wtorek</th>
+                        <th>Środa</th>
+                        <th>Czwartek</th>
+                        <th>Piątek</th>
+                        <th>Sobota</th>
+                        <th>Niedziela</th>
+                        </tr>
+                        </thead>
+                        <tbody class="table-body" id="schedule_table">
+                        </tbody>
+                    </table>
+                    <div class="week_plan_buttons">
+                        <span id="previous_schedule"><i class="fas fa-angle-double-left"></i> Poprzedni</span>
+                        <span id="next_schedule">Następny <i class="fas fa-angle-double-right"></i></span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
 </div>
 
+<script src="js/schedule.js"></script>
 <script src="js/app.js"></script>
 </body>
 </html>
