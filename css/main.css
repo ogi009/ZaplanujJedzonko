@@ -706,19 +706,18 @@ section {
   border: 2px dotted #4a4a49;
 }
 
-.notification_recipt {
+.notification_info {
   grid-column: 7/13;
-  grid-row: 1/2;
   background-color: #FFFFFA;
   border: 2px dotted #3498DB;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.notification_recipt .fas {
+.notification_info .fas {
   color: #3498DB;
 }
-.notification_recipt h3 {
+.notification_info h3 {
   flex: 1;
   font-family: "Open Sans", sans-serif;
   color: #3498DB;
@@ -726,19 +725,18 @@ section {
   padding-left: 15px;
 }
 
-.notification_plan {
+.notification_waring {
   grid-column: 7/13;
-  grid-row: 2/3;
   background-color: #FFFFFA;
   border: 2px dotted #FFB03B;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.notification_plan .fas {
+.notification_waring .fas {
   color: #FFB03B;
 }
-.notification_plan h3 {
+.notification_waring h3 {
   flex: 1;
   font-family: "Open Sans", sans-serif;
   color: #FFB03B;
@@ -746,9 +744,8 @@ section {
   padding-left: 15px;
 }
 
-.notification_bonapetit {
+.notification_succes {
   grid-column: 7/13;
-  grid-row: 3/4;
   background-color: #FFFFFA;
   border: 2px dotted #468966;
   display: flex;
@@ -757,10 +754,10 @@ section {
   font-family: "Open Sans", sans-serif;
   font-size: 20px;
 }
-.notification_bonapetit .fas {
+.notification_succes .fas {
   color: #468966;
 }
-.notification_bonapetit h3 {
+.notification_succes h3 {
   flex: 1;
   font-family: "Open Sans", sans-serif;
   color: #468966;
@@ -773,7 +770,11 @@ section {
   padding: 5px;
 }
 
-.fa-window-close {
+.notification_close {
+  align-self: flex-start;
+}
+
+.notification_close .fa-window-close {
   font-size: 20px;
   align-self: flex-start;
   padding: 5px;

@@ -24,9 +24,9 @@
   border: 2px dotted $colorHeader;
 }
 
-.notification_recipt {
+.notification_info {
   grid-column: 7 / 13;
-  grid-row: 1 / 2;
+  //grid-row: 1 / 2;
   background-color: $colorBackground;
   border: 2px dotted $colorInfo;
   display: flex;
@@ -47,9 +47,9 @@
   }
 }
 
-.notification_plan {
+.notification_waring {
   grid-column: 7 / 13;
-  grid-row: 2/3;
+  //grid-row: 2/3;
   background-color: $colorBackground;
   border: 2px dotted $colorWarning;
 
@@ -71,9 +71,9 @@
   }
 }
 
-.notification_bonapetit {
+.notification_succes {
   grid-column: 7 / 13;
-  grid-row: 3 / 4;
+  //grid-row: 3 / 4;
   background-color: $colorBackground;
   border: 2px dotted $colorSuccess;
   display: flex;
@@ -93,12 +93,16 @@
     padding-left: 15px;
   }
 
+
 }
 .fa-info-circle, , .fa-exclamation-circle, .fa-check-circle {
   font-size: 40px;
   padding: 5px;
 }
-.fa-window-close{
+.notification_close{
+  align-self: flex-start;
+}
+.notification_close .fa-window-close{
   font-size: 20px;
   align-self: flex-start;
   padding: 5px;
