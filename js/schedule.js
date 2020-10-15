@@ -97,17 +97,36 @@ Schedule.prototype.showInfo = function () {
 /*
 Metoda `.saveToLocalStorage()`
 zapisująca do localStorage informacje o przepisie */
+Storage.prototype.setObject = function(key, value) {
+    this.setItem(key, JSON.stringify(value));
+}
+
+Storage.prototype.getObject = function(key) {
+    return JSON.parse(this.getItem(key));
+}
+
 Schedule.prototype.saveToLocalStorage = function () {
-    let array = [this.id,this.title,this.description,this.weekNumber,this.monday,this.tuesday,this.wednesday,this.thursday,
-    this.friday,this.saturday,this.sunday]
-    if (localStorage.getItem(`Plan ${this.id}` !== null)) {
+    if (localStorage.getItem(`Schedule` !== null)) {
 
     } else {
-        localStorage.setItem(`'Plan ${this.id}'`,array);
+        localStorage.setObject(`'Schedule'`,allPlans);
     }
 }
 
 // przygotowanie globalnej zmiennej przechowującej wszystkie plany
 export var allPlans = [];
+if(localStorage.getObject(`'Schedule'`)) {
+    allPlans = localStorage.getObject(`'Schedule'`);
+}
 
+
+// Schedule.prototype.getFromLocalStorage = function () {
+//     console.log(allPlans);
+//     const scheduleAmount = localStorage.getItem('ScheduleAmount');
+//     let testArray = [];
+//
+//     for (let i = 1;i<=scheduleAmount;i++)
+//         const array = localStorage.getItem(`Schedule ${i}`);
+//
+// }
 // utworzenie przykładowego obiektu planu
