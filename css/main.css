@@ -604,7 +604,7 @@ section {
   padding: 20px;
 }
 
-.fas, .far {
+article .fas, article .far {
   font-size: 40px;
   color: #4a4a49;
   text-align: center;
@@ -626,75 +626,75 @@ section {
 }
 .grid_container .grid_row .col-1 {
   min-height: 1px;
-  width: 5.5555555556%;
+  width: 5.5555555556vw;
 }
 .grid_container .grid_row .col-2 {
   min-height: 1px;
-  width: 11.1111111111%;
+  width: 11.1111111111vw;
 }
 .grid_container .grid_row .col-3 {
   min-height: 1px;
-  width: 16.6666666667%;
+  width: 16.6666666667vw;
 }
 .grid_container .grid_row .col-4 {
   min-height: 1px;
-  width: 22.2222222222%;
+  width: 22.2222222222vw;
 }
 .grid_container .grid_row .col-5 {
   min-height: 1px;
-  width: 27.7777777778%;
+  width: 27.7777777778vw;
 }
 .grid_container .grid_row .col-6 {
   min-height: 1px;
-  width: 33.3333333333%;
+  width: 33.3333333333vw;
 }
 .grid_container .grid_row .col-7 {
   min-height: 1px;
-  width: 38.8888888889%;
+  width: 38.8888888889vw;
 }
 .grid_container .grid_row .col-8 {
   min-height: 1px;
-  width: 44.4444444444%;
+  width: 44.4444444444vw;
 }
 .grid_container .grid_row .col-9 {
   min-height: 1px;
-  width: 50%;
+  width: 50vw;
 }
 .grid_container .grid_row .col-10 {
   min-height: 1px;
-  width: 55.5555555556%;
+  width: 55.5555555556vw;
 }
 .grid_container .grid_row .col-11 {
   min-height: 1px;
-  width: 61.1111111111%;
+  width: 61.1111111111vw;
 }
 .grid_container .grid_row .col-12 {
   min-height: 1px;
-  width: 66.6666666667%;
+  width: 66.6666666667vw;
 }
 .grid_container .grid_row .col-13 {
   min-height: 1px;
-  width: 72.2222222222%;
+  width: 72.2222222222vw;
 }
 .grid_container .grid_row .col-14 {
   min-height: 1px;
-  width: 77.7777777778%;
+  width: 77.7777777778vw;
 }
 .grid_container .grid_row .col-15 {
   min-height: 1px;
-  width: 83.3333333333%;
+  width: 83.3333333333vw;
 }
 .grid_container .grid_row .col-16 {
   min-height: 1px;
-  width: 88.8888888889%;
+  width: 88.8888888889vw;
 }
 .grid_container .grid_row .col-17 {
   min-height: 1px;
-  width: 94.4444444444%;
+  width: 94.4444444444vw;
 }
 .grid_container .grid_row .col-18 {
   min-height: 1px;
-  width: 100%;
+  width: 100vw;
 }
 
 .grid_plan {
@@ -722,19 +722,18 @@ section {
   border: 2px dotted #4a4a49;
 }
 
-.notification_recipt {
+.notification_info {
   grid-column: 7/13;
-  grid-row: 1/2;
   background-color: #FFFFFA;
   border: 2px dotted #3498DB;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.notification_recipt .fas {
+.notification_info .fas {
   color: #3498DB;
 }
-.notification_recipt h3 {
+.notification_info h3 {
   flex: 1;
   font-family: "Open Sans", sans-serif;
   color: #3498DB;
@@ -742,19 +741,18 @@ section {
   padding-left: 15px;
 }
 
-.notification_plan {
+.notification_waring {
   grid-column: 7/13;
-  grid-row: 2/3;
   background-color: #FFFFFA;
   border: 2px dotted #FFB03B;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.notification_plan .fas {
+.notification_waring .fas {
   color: #FFB03B;
 }
-.notification_plan h3 {
+.notification_waring h3 {
   flex: 1;
   font-family: "Open Sans", sans-serif;
   color: #FFB03B;
@@ -762,9 +760,8 @@ section {
   padding-left: 15px;
 }
 
-.notification_bonapetit {
+.notification_succes {
   grid-column: 7/13;
-  grid-row: 3/4;
   background-color: #FFFFFA;
   border: 2px dotted #468966;
   display: flex;
@@ -773,10 +770,10 @@ section {
   font-family: "Open Sans", sans-serif;
   font-size: 20px;
 }
-.notification_bonapetit .fas {
+.notification_succes .fas {
   color: #468966;
 }
-.notification_bonapetit h3 {
+.notification_succes h3 {
   flex: 1;
   font-family: "Open Sans", sans-serif;
   color: #468966;
@@ -789,7 +786,11 @@ section {
   padding: 5px;
 }
 
-.fa-window-close {
+.notification_close {
+  align-self: flex-start;
+}
+
+.notification_close .fa-window-close {
   font-size: 20px;
   align-self: flex-start;
   padding: 5px;
@@ -805,7 +806,6 @@ section {
 .app {
   margin: 0;
   padding: 0;
-  width: 100%;
   height: 100vh;
 }
 .app .first_row {
@@ -1139,96 +1139,6 @@ footer {
 .week_plan_buttons i {
   color: #FF6600;
   margin: 0 5px;
-}
-
-.schedule_plan {
-  height: 90%;
-  width: 90%;
-  margin: 40px auto 0;
-  padding: 2em;
-  background-color: #FFFFFA;
-  color: #6b716f;
-  font-size: 1.7em;
-  font-family: "Open Sans", sans-serif;
-}
-
-.d_grid {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  gap: 15px;
-  height: 30%;
-  width: 100%;
-  margin: 0 auto;
-}
-
-.plan_header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #6b716f;
-  color: #FF6600;
-}
-.plan_header button {
-  font-size: 0.7em;
-  background-color: #FF6600;
-  color: white;
-  font-weight: 700;
-  padding: 10px 10px;
-  border: none;
-}
-
-.plan_content {
-  padding: 0.5em;
-}
-.plan_content .text {
-  grid-column: 1/4;
-}
-.plan_content .input {
-  grid-column: 4/12;
-  text-align: center;
-}
-.plan_content .plan_description-text {
-  grid-row: 2/4;
-}
-.plan_content .plan_description-input {
-  grid-row: 2/4;
-}
-.plan_content .plan_weekNumber-input {
-  text-align: center;
-  width: 1.7em;
-}
-
-.plan_table {
-  width: 100%;
-  text-align: center;
-}
-.plan_table td, .plan_table th {
-  width: calc(100% / 6);
-  display: inline-block;
-  vertical-align: middle;
-  padding: 15px;
-}
-.plan_table .bold {
-  font-size: 0.8em;
-  font-weight: bold;
-  text-align: left;
-}
-.plan_table thead {
-  font-weight: bold;
-  border-top: 1px solid #A1A194;
-}
-.plan_table tr {
-  border-bottom: 1px solid #A1A194;
-}
-.plan_table select {
-  font-size: 0.7em;
-  max-width: 100%;
-  overflow: hidden;
-}
-.plan_table select option {
-  font-size: 0.7em;
 }
 
 .d_none {
