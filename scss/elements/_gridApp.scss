@@ -11,7 +11,6 @@
 }
 
 .add_recipt {
-  background-color: blue;
   grid-column: 1 / 4;
   grid-row: 1 / 4;
   background-color: $colorBackground;
@@ -19,7 +18,6 @@
 }
 
 .add_plan {
-  background-color: blue;
   grid-column: 4 / 7;
   grid-row: 1 / 4;
   background-color: $colorBackground;
@@ -27,31 +25,86 @@
 }
 
 .notification_recipt {
-  background-color: blue;
   grid-column: 7 / 13;
   grid-row: 1 / 2;
   background-color: $colorBackground;
-  border: 2px dotted $colorHeader;
+  border: 2px dotted $colorInfo;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+
+  .fas {
+    color: $colorInfo;
+  }
+
+  h3 {
+    flex: 1;
+    font-family: $fontOpenSans;
+    color: $colorInfo;
+    font-size: 20px;
+    padding-left: 15px;
+  }
 }
 
 .notification_plan {
-  background-color: blue;
   grid-column: 7 / 13;
   grid-row: 2/3;
   background-color: $colorBackground;
-  border: 2px dotted $colorHeader;
+  border: 2px dotted $colorWarning;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+
+  .fas{
+    color: $colorWarning;
+  }
+
+  h3 {
+    flex: 1;
+    font-family: $fontOpenSans;
+    color: $colorWarning;
+    font-size: 20px;
+    padding-left: 15px;
+  }
 }
 
 .notification_bonapetit {
-  background-color: blue;
   grid-column: 7 / 13;
   grid-row: 3 / 4;
   background-color: $colorBackground;
-  border: 2px dotted $colorHeader;
+  border: 2px dotted $colorSuccess;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: $fontOpenSans;
+  font-size: 20px;
+
+  .fas{
+    color: $colorSuccess;
+  }
+  h3 {
+    flex: 1;
+    font-family: $fontOpenSans;
+    color: $colorSuccess;
+    font-size: 20px;
+    padding-left: 15px;
+  }
+
+}
+.fa-info-circle, , .fa-exclamation-circle, .fa-check-circle {
+  font-size: 40px;
+  padding: 5px;
+}
+.fa-window-close{
+  font-size: 20px;
+  align-self: flex-start;
+  padding: 5px;
 }
 
 .week_plan {
-  background-color: blue;
   grid-column: 1 / 13;
   grid-row: 4 / 13;
   background-color: $colorBackground;
