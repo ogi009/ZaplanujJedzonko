@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (localStorage.getItem('name') !== null) {
         userName = localStorage.getItem('name');
         message.classList.add("d_none");
-        gridPlan.classList.remove("d_none");
+        //gridPlan.classList.remove("d_none");
         user.innerText = userName;
     } else {
         form.addEventListener('submit', e => {
