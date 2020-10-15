@@ -1,4 +1,6 @@
+import './recipe.js';
 document.addEventListener("DOMContentLoaded", function () {
+
 
     const save = document.querySelector(".schedule_plan-save");
     const weekNumber = document.querySelector(".plan_weekNumber-input");
@@ -16,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const selects = document.querySelectorAll(".recipe_select");
 
     let selectsOptions = '';
+    console.log(allRecipies);
     for (let el of allRecipies) {
         selectsOptions += `<option id = ${el.id} value = ${el.title}>${el.title}</option>`
     }

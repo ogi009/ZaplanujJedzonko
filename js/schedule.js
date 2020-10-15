@@ -109,7 +109,7 @@ Schedule.prototype.saveToLocalStorage = function () {
 var allPlans = [];
 
 // utworzenie przykładowego obiektu planu
-var newPlan = new Schedule(allPlanns.length + 1, 41, "Mięsny Tydzień", "W tym tygodniu dieta jest wyjątkowo mięsna");
+var newPlan = new Schedule(allPlans.length + 1, 41, "Mięsny Tydzień", "W tym tygodniu dieta jest wyjątkowo mięsna");
 newPlan.monday = ["kiełbaska na gorąco", "surowy boczek", "zupa", "schabowy", "kiełbaska na gorąco",]
 newPlan.tuesday = ["raz","dwa","trzy","cztery","piec"];
 newPlan.wednesday = ["raz","dwa","trzy","cztery","piec"];
@@ -118,7 +118,7 @@ newPlan.friday = ["raz","dwa","trzy","cztery","piec"];
 newPlan.saturday = ["raz","dwa","trzy","cztery","piec"];
 newPlan.sunday = ["raz","dwa","trzy","cztery","piec"];
 
-console.clear();
+//console.clear();
 allPlans.push(newPlan);
 allPlans.push(new Schedule(allPlans.length + 1, 42, "Jarski Tydzień", "Tydzień w którym jadam tylko jarsko, a co ;) "));
 
