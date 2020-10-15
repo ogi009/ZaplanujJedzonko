@@ -40,56 +40,71 @@
                         dla Ciebie naszą aplikację;)</p>
                 </div>
             </div>
-<!--            <div class="grid_plan d_none">-->
-<!--                <div class="add_recipt"></div>-->
-<!--                <div class="add_plan"></div>-->
-<!--                <div class="notification_recipt"></div>-->
-<!--                <div class="notification_plan"></div>-->
-<!--                <div class="notification_bonapetit"></div>-->
-<!--                <div class="week_plan">-->
-<!--                    <p class="week_plan_title"></p>-->
-<!--                    <table class="week_plan_table">-->
-<!--                        <thead class="table-head">-->
-<!--                        <tr>-->
-<!--                        <th>Poniedziałek</th>-->
-<!--                        <th>Wtorek</th>-->
-<!--                        <th>Środa</th>-->
-<!--                        <th>Czwartek</th>-->
-<!--                        <th>Piątek</th>-->
-<!--                        <th>Sobota</th>-->
-<!--                        <th>Niedziela</th>-->
-<!--                        </tr>-->
-<!--                        </thead>-->
-<!--                        <tbody class="table-body" id="schedule_table">-->
-<!--                        </tbody>-->
-<!--                    </table>-->
-<!--                    <div class="week_plan_buttons">-->
-<!--                        <span id="previous_schedule"><i class="fas fa-angle-double-left"></i> Poprzedni</span>-->
-<!--                        <span id="next_schedule">Następny <i class="fas fa-angle-double-right"></i></span>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
+                        <div class="grid_plan d_none">
+                            <div class="add_recipt"></div>
+                            <div class="add_plan"></div>
+                            <div class="notification_recipt"></div>
+                            <div class="notification_plan"></div>
+                            <div class="notification_bonapetit"></div>
+                            <div class="week_plan">
+                                <p class="week_plan_title"></p>
+                                <table class="week_plan_table">
+                                    <thead class="table-head">
+                                    <tr>
+                                    <th>Poniedziałek</th>
+                                    <th>Wtorek</th>
+                                    <th>Środa</th>
+                                    <th>Czwartek</th>
+                                    <th>Piątek</th>
+                                    <th>Sobota</th>
+                                    <th>Niedziela</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody class="table-body" id="schedule_table">
+                                    </tbody>
+                                </table>
+                                <div class="week_plan_buttons">
+                                    <span id="previous_schedule"><i class="fas fa-angle-double-left"></i> Poprzedni</span>
+                                    <span id="next_schedule">Następny <i class="fas fa-angle-double-right"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
 
-        <div class="container_recipe grid_plan2">
-            <div class="el el1">
-                <h1 class="new_recipe_title">NOWY PRZEPIS</h1>
-                <button class="new_recipe_button">Zapisz i zamknij</button>
+            <div class="container_recipe grid_plan2">
+                <div class="el el1">
+                    <h1 class="new_recipe_title">NOWY PRZEPIS</h1>
+                    <button class="new_recipe_button">Zapisz i zamknij</button>
+                </div>
+                <div class="el el2">
+                    <h2 class="new_recipe_name">Nazwa przepisu</h2>
+                    <label for="recipe_name"></label>
+                    <textarea id="recipe_name" class="new_recipe_input1" rows="1"></textarea><br>
+                    <h2 class="new_recipe_description">Opis Przepisu</h2>
+                    <label for="texarea_decription"></label>
+                    <textarea id="texarea_decription" class="new_recipe_input2"></textarea>
+                </div>
+                <div class="el el3">
+                    <h1 class="instructions">INSTRUCKJE</h1>
+                    <textarea name="recipe_instructions" id="recipce_instructions"
+                              class="textarea_instrcions"></textarea>
+                    <button class="button"><i class="fas fa-plus"></i></button>
+                    <div class="recipes_container"></div>
+                </div>
+                <div class="el el4">
+                    <h1 class="ingridients">SKŁADNIKI</h1>
+                    <textarea name="recipe_ingridients" id="recipce_ingridients"
+                              class="textarea_indigirends"></textarea>
+                    <button class="button2"><i class="fas fa-plus"></i></button>
+                    <div class="indigirends_container"></div>
+                </div>
+
             </div>
-            <div class="el el2">
-                <h2 class="new_recipe_name">Nazwa przepisu</h2>
-                <input class="new_recipe_input1" placeholder=""><br>
-                <h2 class="new_recipe_description">Opis Przepisu</h2>
-                <input class="new_recipe_input1">
-            </div>
-            <div class="el el3">3</div>
-            <div class="el el4">4</div>
         </div>
-
+    </div>
 </div>
-
 
 
 <script src="js/schedule.js"></script>
