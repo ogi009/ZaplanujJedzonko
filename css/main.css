@@ -1224,6 +1224,8 @@ footer {
 }
 .plan_table select {
   font-size: 0.7em;
+  max-width: 100%;
+  overflow: hidden;
 }
 .plan_table select option {
   font-size: 0.7em;
