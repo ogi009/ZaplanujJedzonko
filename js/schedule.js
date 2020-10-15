@@ -29,6 +29,7 @@ Schedule.prototype.showPlan = function () {
     document.addEventListener("DOMContentLoaded", () => {
         const weekPlanTitle = document.querySelector(".week_plan_title");
         weekPlanTitle.innerText = `Twój plan na ${this.weekNumber} tydzień`;
+
         const weekPlan = document.querySelector("#schedule_table");
         weekPlan.innerHTML = `      
         <tr class="week_plan-breakfast">
