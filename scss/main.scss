@@ -1,7 +1,7 @@
 @import 'generic/reset';
 @import 'settings/colors';
 @import 'settings/fonts';
-
+@import 'settings/hudini';
 @import 'elements/nav';
 @import 'elements/banner';
 @import 'elements/calltoaction';
@@ -14,6 +14,11 @@
 @import 'elements/footer';
 @import "elements/welcomePage";
 @import "elements/week_plan";
+
+
+@import 'settings/hudini';
+@import "elements/week_plan";
+@import "elements/newRecipe";
 
 
 @import 'settings/hudini';
