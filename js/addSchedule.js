@@ -1,4 +1,5 @@
-import './recipe.js';
+import allRecipies from "./recipe.js";
+import {allPlans,Schedule} from "./schedule.js";
 document.addEventListener("DOMContentLoaded", function () {
 
 
@@ -6,6 +7,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const weekNumber = document.querySelector(".plan_weekNumber-input");
     const planTitle = document.querySelector(".plan_name-input");
     const planDescription = document.querySelector(".plan_description-input");
+    const mainPanel = document.querySelector(".grid_plan");
+    const schedulePanel = document.querySelector(".schedule_plan");
 
     const monday = document.getElementById('monday');
     const tuesday = document.getElementById('tuesday')
@@ -18,16 +21,17 @@ document.addEventListener("DOMContentLoaded", function () {
     const selects = document.querySelectorAll(".recipe_select");
 
     let selectsOptions = '';
-    console.log(allRecipies);
+
     for (let el of allRecipies) {
-        selectsOptions += `<option id = ${el.id} value = ${el.title}>${el.title}</option>`
+        selectsOptions += `<option id = ${el.id} value = '${el.title}' >${el.title}</option>`
     }
     for (let el of selects) {
         el.innerHTML = selectsOptions;
     }
 
     save.addEventListener('click', e => {
-        newPlan = new Schedule(allPlans.length + 1, weekNumber.value, planTitle.value, planDescription.value);
+        var newPlan = new Schedule(allPlans.length + 1, weekNumber.value, planTitle.value, planDescription.value);
+        console.log(monday.children[1].children[0].value);
         newPlan.monday = [
             monday.children[1].children[0].value,
             monday.children[2].children[0].value,
@@ -80,6 +84,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
         allPlans.push(newPlan);
-    })
+        mainPanel.classList.remove('d_none');
+        schedulePanel.classList.add('d_none');
 
+        allPlans[0].showPlan();
+    })
 });

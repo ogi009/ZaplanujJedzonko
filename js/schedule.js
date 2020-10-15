@@ -9,7 +9,7 @@ Schedule(id, weekNumber, title, description)
     monday       - array, plan na poniedziałek
 		...          - array, plany na poszczególne dni tygodnia
 */
-function Schedule(id, weekNumber, title, description) {
+export function Schedule(id, weekNumber, title, description) {
     this.id = id; // id przepisu
     this.title = title; // nazwa planu
     this.description = description; // opis planu
@@ -26,7 +26,7 @@ function Schedule(id, weekNumber, title, description) {
     wyświetlająca plan na ekranie aplikacji
  */
 Schedule.prototype.showPlan = function () {
-    document.addEventListener("DOMContentLoaded", () => {
+
         const weekPlanTitle = document.querySelector(".week_plan_title");
         weekPlanTitle.innerText = `Twój plan na ${this.weekNumber} tydzień`;
 
@@ -78,7 +78,6 @@ Schedule.prototype.showPlan = function () {
             <td>${this.sunday[4]}</td>
         </tr>
     `
-    });
 }
 
 /*
@@ -98,29 +97,14 @@ Schedule.prototype.showInfo = function () {
 Metoda `.saveToLocalStorage()`
 zapisująca do localStorage informacje o przepisie */
 Schedule.prototype.saveToLocalStorage = function () {
-    /* if(){
-        // uzupełnij
+        /* if(){
+
       }else{
-        // uzupełnij
+
       } */
 }
 
 // przygotowanie globalnej zmiennej przechowującej wszystkie plany
-var allPlans = [];
+export var allPlans = [];
 
 // utworzenie przykładowego obiektu planu
-var newPlan = new Schedule(allPlans.length + 1, 41, "Mięsny Tydzień", "W tym tygodniu dieta jest wyjątkowo mięsna");
-newPlan.monday = ["kiełbaska na gorąco", "surowy boczek", "zupa", "schabowy", "kiełbaska na gorąco",]
-newPlan.tuesday = ["raz","dwa","trzy","cztery","piec"];
-newPlan.wednesday = ["raz","dwa","trzy","cztery","piec"];
-newPlan.thursday = ["raz","dwa","trzy","cztery","piec"];
-newPlan.friday = ["raz","dwa","trzy","cztery","piec"];
-newPlan.saturday = ["raz","dwa","trzy","cztery","piec"];
-newPlan.sunday = ["raz","dwa","trzy","cztery","piec"];
-
-//console.clear();
-allPlans.push(newPlan);
-allPlans.push(new Schedule(allPlans.length + 1, 42, "Jarski Tydzień", "Tydzień w którym jadam tylko jarsko, a co ;) "));
-
-allPlans[0].showInfo();
-allPlans[0].showPlan();

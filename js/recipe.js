@@ -41,7 +41,7 @@ Recipe.prototype.saveToLocalStorage = function() {
       } */
 }
 
-// przygotowanie globalnej zmiennej przechowującej wszystkie przepisy
+//przygotowanie globalnej zmiennej przechowującej wszystkie przepisy
 var allRecipies = [];
 
 // utworzenie kilku przykładowych przepisów
@@ -65,3 +65,5 @@ newRecipe1.instructions.push("Podawaj z grzankami. Smacznego!");
 
 //console.clear();
 allRecipies[0].showInfo(); // wyświetla pierwszy przepis w konsoli
+
+export default allRecipies;

@@ -1094,7 +1094,7 @@ footer {
   max-width: 100%;
   text-align: center;
   color: #FF6600;
-  padding: 0.7em;
+  padding-bottom: 0.7em;
   border-bottom: 0.01em solid #6b716f;
   font-weight: bold;
 }
@@ -1106,6 +1106,7 @@ footer {
   padding: 0.7em;
   text-align: center;
   color: #6b716f;
+  font-size: 0.9em;
 }
 .week_plan_table .table-head {
   color: #4a4a49;
@@ -1259,7 +1260,7 @@ footer {
   max-width: 100%;
   text-align: center;
   color: #FF6600;
-  padding: 0.7em;
+  padding-bottom: 0.7em;
   border-bottom: 0.01em solid #6b716f;
   font-weight: bold;
 }
@@ -1271,6 +1272,7 @@ footer {
   padding: 0.7em;
   text-align: center;
   color: #6b716f;
+  font-size: 0.9em;
 }
 .week_plan_table .table-head {
   color: #4a4a49;
