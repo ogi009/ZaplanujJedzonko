@@ -107,9 +107,7 @@ Storage.prototype.getObject = function(key) {
 }
 
 Schedule.prototype.saveToLocalStorage = function () {
-
     localStorage.setObject(`'Schedule'`,allPlans);
-
 }
 
 // przygotowanie globalnej zmiennej przechowującej wszystkie plany

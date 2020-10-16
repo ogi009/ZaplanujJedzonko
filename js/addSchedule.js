@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
             ];
 
             allPlans.push(newPlan);
-            newPlan.saveToLocalStorage();
+            allPlans.saveToLocalStorage();
             mainPanel.classList.remove('d_none');
             schedulePanel.classList.add('d_none');
         }
