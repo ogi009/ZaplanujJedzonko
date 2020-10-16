@@ -23,61 +23,67 @@ export function Schedule(id, weekNumber, title, description) {
     this.sunday = []; // plan na niedzielę
 }
 
+Schedule.prototype.sortPlans = function () {
+    allPlans.sort((a,b) => a.weekNumber - b.weekNumber);
+}
 /* Metoda `.showPlan()`
     wyświetlająca plan na ekranie aplikacji
  */
-Schedule.prototype.showPlan = function (weekNr = this.weekNumber) {
+Schedule.prototype.showNoPlan = function (weekNr){
+    const weekPlanTitle = document.querySelector(".week_plan_title");
+    weekPlanTitle.innerText = this.title + ' ' + weekNr;
+}
+export const showPlan = function (el) {
 
     const weekPlanTitle = document.querySelector(".week_plan_title");
-    this === empty ? weekPlanTitle.innerText = this.title + ' ' + weekNr :
-    weekPlanTitle.innerText = `Twój plan na ${this.weekNumber} tydzień`;
+    weekPlanTitle.innerText = `Twój plan na ${el.weekNumber} tydzień`;
 
     const weekPlan = document.querySelector("#schedule_table");
     weekPlan.innerHTML = `      
         <tr class="week_plan-breakfast">
-            <td>${this.monday[0]}</td>
-            <td>${this.tuesday[0]}</td>
-            <td>${this.wednesday[0]}</td>
-            <td>${this.thursday[0]}</td>
-            <td>${this.friday[0]}</td>
-            <td>${this.saturday[0]}</td>
-            <td>${this.sunday[0]}</td>
+            <td>${el.monday[0]}</td>
+            <td>${el.tuesday[0]}</td>
+            <td>${el.wednesday[0]}</td>
+            <td>${el.thursday[0]}</td>
+            <td>${el.friday[0]}</td>
+            <td>${el.saturday[0]}</td>
+            <td>${el.sunday[0]}</td>
         </tr>
         <tr class="week_plan-secondBreakfast">
-            <td>${this.monday[1]}</td>
-            <td>${this.tuesday[1]}</td>
-            <td>${this.wednesday[1]}</td>
-            <td>${this.thursday[1]}</td>
-            <td>${this.friday[1]}</td>
-            <td>${this.saturday[1]}</td>
-            <td>${this.sunday[1]}</td>
+            <td>${el.monday[1]}</td>
+            <td>${el.tuesday[1]}</td>
+            <td>${el.wednesday[1]}</td>
+            <td>${el.thursday[1]}</td>
+            <td>${el.friday[1]}</td>
+            <td>${el.saturday[1]}</td>
+            <td>${el.sunday[1]}</td>
         </tr>
         <tr class="week_plan-soup">
-            <td>${this.monday[2]}</td>
-            <td>${this.tuesday[2]}</td>
-            <td>${this.wednesday[2]}</td>
-            <td>${this.thursday[2]}</td>
-            <td>${this.friday[2]}</td>
-            <td>${this.saturday[2]}</td>
-            <td>${this.sunday[2]}</td>
+            <td>${el.monday[2]}</td>
+            <td>${el.tuesday[2]}</td>
+            <td>${el.wednesday[2]}</td>
+            <td>${el.thursday[2]}</td>
+            <td>${el.friday[2]}</td>
+            <td>${el.saturday[2]}</td>
+            <td>${el.sunday[2]}</td>
         </tr>
         <tr class="week_plan-dinner">
-            <td>${this.monday[3]}</td>
-            <td>${this.tuesday[3]}</td>
-            <td>${this.wednesday[3]}</td>
-            <td>${this.thursday[3]}</td>
-            <td>${this.friday[3]}</td>
-            <td>${this.saturday[3]}</td>
-            <td>${this.sunday[3]}</td>
+            <td>${el.monday[3]}</td>
+            <td>${el.tuesday[3]}</td>
+            <td>${el.wednesday[3]}</td>
+            <td>${el.thursday[3]}</td>
+            <td>${el.friday[3]}</td>
+            <td>${el.saturday[3]}</td>
+            <td>${el.sunday[3]}</td>
         </tr>
         <tr class="week_plan-supper">
-            <td>${this.monday[4]}</td>
-            <td>${this.tuesday[4]}</td>
-            <td>${this.wednesday[4]}</td>
-            <td>${this.thursday[4]}</td>
-            <td>${this.friday[4]}</td>
-            <td>${this.saturday[4]}</td>
-            <td>${this.sunday[4]}</td>
+            <td>${el.monday[4]}</td>
+            <td>${el.tuesday[4]}</td>
+            <td>${el.wednesday[4]}</td>
+            <td>${el.thursday[4]}</td>
+            <td>${el.friday[4]}</td>
+            <td>${el.saturday[4]}</td>
+            <td>${el.sunday[4]}</td>
         </tr>
     `
 }
@@ -94,28 +100,40 @@ Schedule.prototype.showInfo = function () {
         console.warn(i, elem); // wyświetl każdy poskiłek z poniedziałku
     })
 }
+Schedule.prototype.createList = function () {
+    const list = document.querySelector(".schedule_list-table");
+    list.children[1].innerHTML = '';
 
+    for(let el of allPlans) {
+    const listElement = document.createElement('tr');
+    listElement.innerHTML = `
+        <td class="list_id">${el.id}</td>
+        <td class="list_name">${el.title}</td>
+        <td class="list_description">${el.description}</td>
+        <td class="list_weekNumber">${el.weekNumber}</td>
+        <td class="list_actions"><div class="list_actions-container"><i class="far fa-edit schedule-edit"></i><i class="far fa-trash-alt schedule-delete"></i><div></div></td>
+        `
+        list.children[1].append(listElement);
+    }
+}
 /*
 Metoda `.saveToLocalStorage()`
 zapisująca do localStorage informacje o przepisie */
 Storage.prototype.setObject = function(key, value) {
     this.setItem(key, JSON.stringify(value));
 }
-
 Storage.prototype.getObject = function(key) {
     return JSON.parse(this.getItem(key));
 }
-
 Schedule.prototype.saveToLocalStorage = function () {
     localStorage.setObject(`'Schedule'`,allPlans);
 }
-
 // przygotowanie globalnej zmiennej przechowującej wszystkie plany
 export var allPlans = [];
 if(localStorage.getObject(`'Schedule'`)) {
     allPlans = localStorage.getObject(`'Schedule'`);
-}
 
+}
 export const empty = new Schedule(0, 0, 'Wygląda na to że nie masz jeszcze żadnego planu na ten tydzień', '');
 empty.monday =['','','','',''];
 empty.tuesday =['','','','',''];
@@ -125,3 +143,4 @@ empty.friday =['','','','',''];
 empty.saturday =['','','','',''];
 empty.sunday =['','','','',''];
 // utworzenie przykładowego obiektu planu
+empty.createList();

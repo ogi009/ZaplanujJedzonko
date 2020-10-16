@@ -1,10 +1,10 @@
 import allRecipies from "./recipe.js";
-import {allPlans,Schedule} from "./schedule.js";
+import {allPlans, empty, Schedule} from "./schedule.js";
 import {verification} from "./inputVerifaction.js";
 import {getWeekNumber} from "./displaySchedule.js";
+import {showPlan} from "./schedule.js";
 
 document.addEventListener("DOMContentLoaded", function () {
-
 
     const save = document.querySelector(".schedule_plan-save");
     const weekNumber = document.querySelector(".plan_weekNumber-input");
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     save.addEventListener('click', e => {
         if(weekNumber.value && planDescription.value && planTitle.value) {
-            const newPlan = new Schedule(allPlans.length + 1, weekNumber.value, planTitle.value, planDescription.value);
+            var newPlan = new Schedule(allPlans.length + 1, weekNumber.value, planTitle.value, planDescription.value);
             newPlan.monday = [
                 monday.children[1].children[0].value,
                 monday.children[2].children[0].value,
@@ -88,7 +88,10 @@ document.addEventListener("DOMContentLoaded", function () {
             ];
 
             allPlans.push(newPlan);
-            allPlans.saveToLocalStorage();
+            newPlan.saveToLocalStorage();
+            newPlan.sortPlans();
+            newPlan.createList();
+            showPlan(newPlan);
             mainPanel.classList.remove('d_none');
             schedulePanel.classList.add('d_none');
         }

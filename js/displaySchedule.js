@@ -1,5 +1,6 @@
 import {allPlans} from "./schedule.js";
 import {empty} from "./schedule.js";
+import {showPlan} from "./schedule.js";
 
 export function getWeekNumber(d) {
     // Copy date so don't modify original
@@ -15,31 +16,27 @@ export function getWeekNumber(d) {
     return  weekNo;
 }
 
-console.log(allPlans);
-console.log(empty);
-
-function sortPlans() {
-    allPlans.sort((a,b) => a.weekNumber - b.weekNumber);
-}
-
 document.addEventListener("DOMContentLoaded", function() {
 
     const next = document.getElementById('next_schedule');
     const previous = document.getElementById('previous_schedule');
     let currentWeekNr = getWeekNumber(new Date());
+    if(allPlans) {
+        empty.showNoPlan(currentWeekNr);
+    }
     for (let el of allPlans) {
-        el.weekNumber === currentWeekNr ? el.showPlan() : empty.showPlan(currentWeekNr);
+        +el.weekNumber === currentWeekNr ? showPlan(el) : empty.showNoPlan(currentWeekNr);
     }
     next.addEventListener('click', e=> {
         currentWeekNr >= 52 ? currentWeekNr = 1 : currentWeekNr++
         for (let el of allPlans) {
-            el.weekNumber === currentWeekNr ? el.showPlan() : empty.showPlan(currentWeekNr);
+            +el.weekNumber === currentWeekNr ? showPlan(el) : empty.showNoPlan(currentWeekNr);
         }
     })
     previous.addEventListener('click', e => {
         currentWeekNr <= 1 ? currentWeekNr = 52 : currentWeekNr--;
         for (let el of allPlans) {
-            el.weekNumber === currentWeekNr ? el.showPlan() : empty.showPlan(currentWeekNr);
+            +el.weekNumber === currentWeekNr ? showPlan(el) : empty.showNoPlan(currentWeekNr);
         }
     })
 });

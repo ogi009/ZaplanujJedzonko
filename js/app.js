@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const user = document.querySelector("#user_name");
     const gridPlan = document.querySelector(".grid_plan");
 
+
     let userName;
     if (localStorage.getItem('name') !== null) {
         userName = localStorage.getItem('name');
@@ -28,4 +29,6 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         })
     }
+
+
 });
