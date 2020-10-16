@@ -1,3 +1,5 @@
+import {verification} from "./inputVerifaction.js";
+
 document.addEventListener("DOMContentLoaded", function () {
 
     const message = document.querySelector('#welcome_message')
@@ -7,7 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const gridPlan = document.querySelector(".grid_plan");
 
     let userName;
-
     if (localStorage.getItem('name') !== null) {
         userName = localStorage.getItem('name');
         message.classList.add("d_none");
@@ -23,9 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 message.classList.add("d_none");
                 gridPlan.classList.remove("d_none");
             } else {
-                input.style.border = `1px solid tomato`;
-                input.setAttribute('placeholder','Proszę wprowadzić imię');
-                input.classList.add('placeholder_red');
+                verification(input,'Proszę wprowadzić imię');
             }
         })
     }

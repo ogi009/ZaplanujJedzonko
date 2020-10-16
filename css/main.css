@@ -1094,7 +1094,7 @@ footer {
   max-width: 100%;
   text-align: center;
   color: #FF6600;
-  padding: 0.7em;
+  padding-bottom: 0.7em;
   border-bottom: 0.01em solid #6b716f;
   font-weight: bold;
 }
@@ -1106,6 +1106,7 @@ footer {
   padding: 0.7em;
   text-align: center;
   color: #6b716f;
+  font-size: 0.9em;
 }
 .week_plan_table .table-head {
   color: #4a4a49;
@@ -1188,7 +1189,7 @@ footer {
 }
 .plan_content .input {
   grid-column: 4/12;
-  text-align: center;
+  font-size: 0.8em;
 }
 .plan_content .plan_description-text {
   grid-row: 2/4;
@@ -1199,6 +1200,7 @@ footer {
 .plan_content .plan_weekNumber-input {
   text-align: center;
   width: 1.7em;
+  font-size: 0.8em;
 }
 
 .plan_table {
@@ -1209,7 +1211,7 @@ footer {
   width: calc(100% / 6);
   display: inline-block;
   vertical-align: middle;
-  padding: 15px;
+  padding: 10px;
 }
 .plan_table .bold {
   font-size: 0.8em;
@@ -1259,7 +1261,7 @@ footer {
   max-width: 100%;
   text-align: center;
   color: #FF6600;
-  padding: 0.7em;
+  padding-bottom: 0.7em;
   border-bottom: 0.01em solid #6b716f;
   font-weight: bold;
 }
@@ -1271,6 +1273,7 @@ footer {
   padding: 0.7em;
   text-align: center;
   color: #6b716f;
+  font-size: 0.9em;
 }
 .week_plan_table .table-head {
   color: #4a4a49;

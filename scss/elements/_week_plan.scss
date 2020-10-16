@@ -11,7 +11,7 @@ $colorTable: color.scale($colorNav, $lightness: 10%);
   max-width: 100%;
   text-align: center;
   color: $colorButtons;
-  padding: 0.7em;
+  padding-bottom: 0.7em;
   border-bottom: 0.01em solid $colorTable;
   font-weight: bold;
 }
@@ -22,6 +22,7 @@ $colorTable: color.scale($colorNav, $lightness: 10%);
   padding: 0.7em;
   text-align: center;
   color: $colorTable;
+  font-size: 0.9em;
 
   .table-head{
     color: $colorHeader;

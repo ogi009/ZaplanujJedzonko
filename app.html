@@ -22,9 +22,9 @@
     </div>
     <div class="grid_row second_row">
         <div class="col-3 app_nav">
-            <a href="" class="app_nav-ref">Pulpit<span>&gt;</span></a>
-            <a href="" class="app_nav-ref">Przepisy<span>&gt;</span></a>
-            <a href="" class="app_nav-ref">Plany<span>&gt;</span></a>
+            <a href="" class="app_nav-ref" id="main_panel">Pulpit<span>&gt;</span></a>
+            <a href="" class="app_nav-ref" id="recipes_panel">Przepisy<span>&gt;</span></a>
+            <a href="" class="app_nav-ref" id="schedules_panel">Plany<span>&gt;</span></a>
         </div>
         <div class="col-15 app_content">
             <div class="welcome_page" id="welcome_message">
@@ -40,7 +40,7 @@
                         dla Ciebie naszą aplikację;)</p>
                 </div>
             </div>
-            <div class="grid_plan d_none">
+            <div class="grid_plan">
                 <div class="add_recipt">
                     <a class="addNewRecipt" href="">
                         <i class="far fa-plus-square"></i>
@@ -97,7 +97,7 @@
                     </div>
                 </div>
             </div>
-            <div class="schedule_plan">
+            <div class="schedule_plan d_none">
                 <!--                //d_none">-->
                 <div class="plan_header">
                     <h3 class="schedule_plan-title">NOWY PLAN</h3>
@@ -105,9 +105,9 @@
                 </div>
                 <div class="plan_content d_grid">
                     <h3 class="plan_name-text text">Nazwa planu</h3>
-                    <input class="plan_name-input input">
+                    <input type="text" class="plan_name-input input">
                     <h3 class="plan_description-text text">Opis planu</h3>
-                    <input class="plan_description-input input">
+                    <textarea class="plan_description-input input"></textarea>
                     <h3 class="plan_weekNumber-text text">Numer tygodnia</h3>
                     <input class="plan_weekNumber-input">
                 </div>
@@ -281,10 +281,12 @@
 </div>
 </div>
 
-
-<script src="js/addSchedule.js"></script>
+<script src="js/navigation.js"></script>
+<script type = "module" src="js/addSchedule.js"></script>
+<script type = "module" src="js/recipe.js"></script>
+<script type="module" src="js/inputVerifaction.js"></script>
 <script src="js/schedule.js"></script>
-<script src="js/app.js"></script>
+<script type="module" src="js/app.js"></script>
 <script src="js/notification.js"></script>
 <script src="js/newRecipt.js"></script>
 </body>
