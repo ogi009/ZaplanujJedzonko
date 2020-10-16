@@ -1,4 +1,4 @@
-.schedule_list {
+.schedule_list,.recipes_list {
   height: 90%;
   width: 90%;
   margin: 40px auto 0;
@@ -27,7 +27,7 @@
     border-radius: 10px;
   }
 }
-.schedule_list-table {
+.schedule_list-table,.recipe_list-table {
   text-align: left;
   width: 98%;
   margin: 10px auto;
