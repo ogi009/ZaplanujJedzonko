@@ -14,6 +14,7 @@
 .el {
   //border: 1px solid black;
 }
+
 .el1 {
   grid-column: 1 / 13;
 
@@ -23,29 +24,34 @@
   padding-bottom: 10px;
   height: 50px;
 }
+
 .el2 {
   grid-column: 1 / 13;
   grid-row: 2/4;
   margin: 5px;
 }
+
 .el3 {
   grid-column: 1 / 6;
   grid-row: 4/6;
 }
+
 .el4 {
   grid-column: 6 / 13;
   grid-row: 4/6;
   margin-left: 20px;
 }
+
 .new_recipe_title {
   font-family: $fontOpenSans;
   font-size: 25px;
   color: $colorButtons;
   align-self: flex-end;
 }
+
 .new_recipe_button {
   background-color: $colorButtons;
-  padding: 10px;
+  border: none;
   color: white;
   font-family: $fontOpenSans;
   font-weight: bold;
@@ -53,6 +59,7 @@
   align-self: flex-end;
   margin-right: 10px;
 }
+
 .new_recipe_name {
   display: inline-block;
   font-family: $fontOpenSans;
@@ -61,6 +68,7 @@
   margin-right: 20px;
   margin-bottom: 20px;
 }
+
 .new_recipe_description {
   display: inline-block;
   font-family: $fontOpenSans;
@@ -70,12 +78,14 @@
   margin-bottom: 20px;
   margin-top: 10px;
 }
+
 .new_recipe_input1 {
   width: 80%;
   resize: none;
   padding: 10px;
 
 }
+
 .new_recipe_input2 {
   width: 80%;
   margin-top: 10px;
@@ -83,6 +93,7 @@
   height: 120px;
   padding: 10px;
 }
+
 .instructions {
   font-family: $fontOpenSans;
   color: $colorNav;
@@ -92,6 +103,7 @@
   margin: 5px;
   padding: 5px;
 }
+
 .textarea_instrcions {
   resize: none;
   width: 80%;
@@ -100,6 +112,7 @@
   font-style: $fontOpenSans;
   padding: 10px;
 }
+
 .recipe_button {
   background-color: green;
   color: white;
@@ -120,7 +133,8 @@
   margin: 5px;
   padding: 5px;
 }
-.textarea_indigirends {
+
+.textarea_ingridients {
   resize: none;
   width: 80%;
   font-style: $fontOpenSans;
@@ -128,18 +142,35 @@
   height: 50px;
   padding: 10px;
 }
-.recipes_container {
 
+.recipes_container {
   width: 500px;
   height: 250px;
   padding: 20px;
   overflow: auto;
 }
-.indigirends_container {
-  margin-top: 53px;
+
+.ingridients_container {
+  margin-top: 60px;
   width: 700px;
   height: 250px;
   box-sizing: border-box;
   padding: 20px;
   overflow: auto;
+}
+
+.recipes_container_ul {
+  list-style-type: decimal;
+  font-family: $fontOpenSans;
+  color: $colorNav;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.ingridients_container_ul {
+  list-style-type: disc;
+  font-family: $fontOpenSans;
+  color: $colorNav;
+  font-size: 16px;
+  line-height: 22px;
 }
