@@ -8,6 +8,7 @@
   width: 90%;
   margin: 40px auto 0;
   padding: 2em;
+  border: 2px dotted black;
 }
 
 .el {
@@ -18,8 +19,8 @@
 
   display: flex;
   justify-content: space-between;
-  border-bottom: 4px solid $colorText;
-  padding-bottom: 5px;
+  border-bottom: 2px solid $colorText;
+  padding-bottom: 10px;
   height: 50px;
 }
 .el2 {
@@ -40,7 +41,6 @@
   font-family: $fontOpenSans;
   font-size: 25px;
   color: $colorButtons;
-  font-weight: bold;
   align-self: flex-end;
 }
 .new_recipe_button {
@@ -88,7 +88,7 @@
   color: $colorNav;
   width: 95%;
   font-size: 25px;
-  border-bottom: 3px solid $colorNav;
+  border-bottom: 3px solid $colorText;
   margin: 5px;
   padding: 5px;
 }
@@ -100,23 +100,23 @@
   font-style: $fontOpenSans;
   padding: 10px;
 }
-
-.button,
-.button2{
+.recipe_button {
   background-color: green;
-  border-radius: 10px;
-  margin: 10px;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 10px;
   border: none;
 }
-.fas {
-  color: white;
-}
+
+
 .ingridients {
   font-family: $fontOpenSans;
   color: $colorNav;
   width: 95%;
   font-size: 25px;
-  border-bottom: 3px solid $colorNav;
+  border-bottom: 3px solid $colorText;
   margin: 5px;
   padding: 5px;
 }
