@@ -1,16 +1,30 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     const gridPlan = document.querySelector(".grid_plan");
+    const notificationBox = document.querySelector(".notification_box");
     let notificationClose = document.querySelectorAll(".notification_close");
 
     const notificationArray = [];
     const notificationArrayCounter = [];
 
-    const printNotificationArray = () => {
-        for (let el of notificationArray) {
-            gridPlan.prepend(el);
+
+    const printNotificationArray = () =>{
+
+        if (notificationArray.length>=3){
+            notificationBox.innerHTML=``;
+            notificationBox.prepend(notificationArray[notificationArray.length-3]);
+            notificationBox.prepend(notificationArray[notificationArray.length-2]);
+            notificationBox.prepend(notificationArray[notificationArray.length-1]);
+        } else {for (let el of notificationArray) {
+            notificationBox.prepend(el);
+                }
+
         }
+
     }
+
+
+
     const addNotificationInfo = (notificationInfo) => {
 
         notificationArrayCounter.push(notificationArrayCounter.length)
@@ -23,15 +37,15 @@ document.addEventListener("DOMContentLoaded", function () {
                     <a class="notification_close" href="">
                         <i class="fas fa-window-close"></i>
                     </a>`;
-        // gridPlan.append(notificationInfoInsert)
-        notificationClose = document.querySelectorAll(".notification_close");
         notificationArray.push(notificationInfoInsert);
         printNotificationArray();
 
+        notificationClose = document.querySelectorAll(".notification_close");
         for (let el of notificationClose) {
             el.addEventListener("click", e => {
                 e.preventDefault();
                 el.parentElement.classList.add("d_none");
+                // printNotificationArray();
             })
         }
 
@@ -51,15 +65,15 @@ document.addEventListener("DOMContentLoaded", function () {
                 <a class="notification_close" href="">
                         <i class="fas fa-window-close"></i>
                     </a>`;
-        // gridPlan.append(notificationWaringInsert)
-        notificationClose = document.querySelectorAll(".notification_close");
         notificationArray.push(notificationWaringInsert);
         printNotificationArray();
 
+        notificationClose = document.querySelectorAll(".notification_close");
         for (let el of notificationClose) {
             el.addEventListener("click", e => {
                 e.preventDefault();
                 el.parentElement.classList.add("d_none");
+                // printNotificationArray();
             })
         }
     };
@@ -79,29 +93,28 @@ document.addEventListener("DOMContentLoaded", function () {
                     <a class="notification_close" href="">
                         <i class="fas fa-window-close"></i>
                     </a>`;
-        // gridPlan.append(notificationSuccesInsert)
-        notificationClose = document.querySelectorAll(".notification_close");
         notificationArray.push(notificationSuccesInsert);
         printNotificationArray();
 
-
+        notificationClose = document.querySelectorAll(".notification_close");
         for (let el of notificationClose) {
             el.addEventListener("click", e => {
                 e.preventDefault();
                 el.parentElement.classList.add("d_none");
+                // printNotificationArray();
             })
         }
     };
 
     addNotificationSucces("Świetnie że jesteś! Udanego planowania i samcznego!");
     addNotificationWaringn("Pamiętaj, aby dodać plan!");
-    addNotificationSucces("3");
+
+    addNotificationSucces("1");
+    // addNotificationWaringn("2");
+    // addNotificationWaringn("3");
+    // addNotificationWaringn("4");
 
 
 
-
-
-    // addNotificationInfo("info");
-    // addNotificationWaringn("waring");
 
 });
