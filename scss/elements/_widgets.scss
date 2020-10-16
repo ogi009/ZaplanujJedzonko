@@ -1,0 +1,27 @@
+.add_recipe_button,
+.add_plan_button {
+  font-size: 80px;
+  color: $colorSuccess;
+
+
+}
+.widget_text {
+  color: $colorSuccess;
+  font-size: 30px;
+  font-family: $fontOpenSans;
+  text-align: center;
+  margin-top: 10px;
+}
+.addNewRecipt,
+.addNewPlan{
+  text-decoration: none;
+  text-align: center;
+
+}
+.add_recipt,
+.add_plan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}

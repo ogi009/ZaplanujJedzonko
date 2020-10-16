@@ -735,6 +735,7 @@ article .fas, article .far {
 }
 .notification_info .fas {
   color: #3498DB;
+  font-size: 32px;
 }
 .notification_info h3 {
   flex: 1;
@@ -754,6 +755,7 @@ article .fas, article .far {
 }
 .notification_waring .fas {
   color: #FFB03B;
+  font-size: 32px;
 }
 .notification_waring h3 {
   flex: 1;
@@ -775,6 +777,7 @@ article .fas, article .far {
 }
 .notification_succes .fas {
   color: #468966;
+  font-size: 32px;
 }
 .notification_succes h3 {
   flex: 1;
@@ -1246,6 +1249,34 @@ footer {
 }
 .plan_table select option {
   font-size: 0.7em;
+}
+
+.add_recipe_button,
+.add_plan_button {
+  font-size: 80px;
+  color: #468966;
+}
+
+.widget_text {
+  color: #468966;
+  font-size: 30px;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.addNewRecipt,
+.addNewPlan {
+  text-decoration: none;
+  text-align: center;
+}
+
+.add_recipt,
+.add_plan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
 }
 
 .d_none {

@@ -36,6 +36,7 @@
 
   .fas {
     color: $colorInfo;
+    font-size: 32px;
   }
 
   h3 {
@@ -59,12 +60,14 @@
 
   .fas {
     color: $colorWarning;
+    font-size: 32px;
   }
 
   h3 {
     flex: 1;
     font-family: $fontOpenSans;
     color: $colorWarning;
+
     font-size: 20px;
     padding-left: 15px;
   }
@@ -82,6 +85,8 @@
 
   .fas {
     color: $colorSuccess;
+    font-size: 32px;
+
   }
 
   h3 {
