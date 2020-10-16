@@ -19,21 +19,25 @@ section {
 
 .article_title {
   font-size: 22px;
+  width: 50%;
   color: $colorHeader;
   text-align: center;
   margin: 10px auto;
 }
 
 .article_text {
-  color: #4a4a49;
-  font-size: 14px;
+  width: 70%;
+  color: $colorHeader;
+  font-size: 18px;
   text-align: center;
   margin: 10px auto;
   padding: 20px;
 }
 
 article .fas, article .far {
-  font-size: 40px;
-  color: $colorHeader;
+  font-size: 60px;
+  color: $colorText;
   text-align: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
 }
