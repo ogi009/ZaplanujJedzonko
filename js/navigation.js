@@ -49,13 +49,10 @@ document.addEventListener("DOMContentLoaded", function() {
         e.preventDefault();
         mainPanel.classList.add('d_none');
         schedulePanel.classList.remove('d_none');
-        recipePanel.classList.add('d_none');
         scheduleList.classList.add('d_none');
         saveButton.classList.remove('d_none');
         editButton.classList.add('d_none');
         saveTitle.classList.remove('d_none');
         editTitle.classList.add('d_none');
     })
-
-
 });

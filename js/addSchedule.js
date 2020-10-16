@@ -50,6 +50,8 @@ document.addEventListener("DOMContentLoaded", function () {
             newPlan.createList();
             mainPanel.classList.remove('d_none');
             schedulePanel.classList.add('d_none');
+            planTitle.value = '';
+            planDescription.value = '';
         }
         else {
             weekNumber.value ? null:verification(weekNumber,'Nr');

@@ -21,11 +21,15 @@ document.addEventListener("DOMContentLoaded", function() {
     const next = document.getElementById('next_schedule');
     const previous = document.getElementById('previous_schedule');
     let currentWeekNr = getWeekNumber(new Date());
-    if(allPlans) {
+    if(localStorage.getObject(`'Schedule'`)) {
         empty.showNoPlan(currentWeekNr);
     }
     for (let el of allPlans) {
-        +el.weekNumber === currentWeekNr ? showPlan(el) : empty.showNoPlan(currentWeekNr);
+        if(+el.weekNumber === currentWeekNr) {
+            showPlan(el)
+            break;
+        }
+        else  empty.showNoPlan(currentWeekNr);
     }
     next.addEventListener('click', e=> {
         currentWeekNr >= 52 ? currentWeekNr = 1 : currentWeekNr++
