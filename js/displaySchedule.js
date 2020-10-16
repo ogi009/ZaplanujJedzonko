@@ -30,13 +30,21 @@ document.addEventListener("DOMContentLoaded", function() {
     next.addEventListener('click', e=> {
         currentWeekNr >= 52 ? currentWeekNr = 1 : currentWeekNr++
         for (let el of allPlans) {
-            +el.weekNumber === currentWeekNr ? showPlan(el) : empty.showNoPlan(currentWeekNr);
+            if(+el.weekNumber === currentWeekNr) {
+                showPlan(el)
+                break;
+            }
+            else  empty.showNoPlan(currentWeekNr);
         }
     })
     previous.addEventListener('click', e => {
         currentWeekNr <= 1 ? currentWeekNr = 52 : currentWeekNr--;
         for (let el of allPlans) {
-            +el.weekNumber === currentWeekNr ? showPlan(el) : empty.showNoPlan(currentWeekNr);
+            if(+el.weekNumber === currentWeekNr) {
+                showPlan(el)
+                break;
+            }
+            else  empty.showNoPlan(currentWeekNr);
         }
     })
 });

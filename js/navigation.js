@@ -10,6 +10,10 @@ document.addEventListener("DOMContentLoaded", function() {
     const recipePanel = document.querySelector(".container_recipe");
     const scheduleList = document.querySelector(".schedule_list");
     const addSchedule = document.querySelector(".schedule_list-add");
+    const saveButton =document.querySelector(".schedule_plan-save");
+    const editButton = document.querySelector(".schedule_plan-edit");
+    const saveTitle = document.querySelector(".schedule_plan-title");
+    const editTitle = document.querySelector(".schedule_edit-title");
 
     main.addEventListener('click' , e=> {
         e.preventDefault();
@@ -40,7 +44,11 @@ document.addEventListener("DOMContentLoaded", function() {
         mainPanel.classList.add('d_none');
         schedulePanel.classList.remove('d_none');
         recipePanel.classList.add('d_none');
-        scheduleList.classList.add('d_none')
+        scheduleList.classList.add('d_none');
+        saveButton.classList.remove('d_none');
+        editButton.classList.add('d_none');
+        saveTitle.classList.remove('d_none');
+        editTitle.classList.add('d_none');
     })
 
 

@@ -32,6 +32,8 @@ Schedule.prototype.sortPlans = function () {
 Schedule.prototype.showNoPlan = function (weekNr){
     const weekPlanTitle = document.querySelector(".week_plan_title");
     weekPlanTitle.innerText = this.title + ' ' + weekNr;
+    const weekPlan = document.querySelector("#schedule_table");
+    weekPlan.innerHTML = ''
 }
 export const showPlan = function (el) {
 
