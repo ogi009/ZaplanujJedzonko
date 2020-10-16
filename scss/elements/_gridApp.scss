@@ -8,6 +8,7 @@
   width: 90%;
   margin: 40px auto 0;
   padding: 1em;
+
 }
 
 .add_recipt {
@@ -25,8 +26,7 @@
 }
 
 .notification_info {
-  grid-column: 7 / 13;
-  //grid-row: 1 / 2;
+  grid-column: 1 / 2;
   background-color: $colorBackground;
   border: 2px dotted $colorInfo;
   display: flex;
@@ -48,8 +48,7 @@
 }
 
 .notification_waring {
-  grid-column: 7 / 13;
-  //grid-row: 2/3;
+  grid-column: 1 / 2;
   background-color: $colorBackground;
   border: 2px dotted $colorWarning;
 
@@ -58,7 +57,7 @@
   align-items: center;
 
 
-  .fas{
+  .fas {
     color: $colorWarning;
   }
 
@@ -72,8 +71,7 @@
 }
 
 .notification_succes {
-  grid-column: 7 / 13;
-  //grid-row: 3 / 4;
+  grid-column: 1 / 2;
   background-color: $colorBackground;
   border: 2px dotted $colorSuccess;
   display: flex;
@@ -82,9 +80,10 @@
   font-family: $fontOpenSans;
   font-size: 20px;
 
-  .fas{
+  .fas {
     color: $colorSuccess;
   }
+
   h3 {
     flex: 1;
     font-family: $fontOpenSans;
@@ -95,14 +94,20 @@
 
 
 }
-.fa-info-circle, , .fa-exclamation-circle, .fa-check-circle {
+
+.fa-info-circle,
+
+,
+.fa-exclamation-circle, .fa-check-circle {
   font-size: 40px;
   padding: 5px;
 }
-.notification_close{
+
+.notification_close {
   align-self: flex-start;
 }
-.notification_close .fa-window-close{
+
+.notification_close .fa-window-close {
   font-size: 20px;
   align-self: flex-start;
   padding: 5px;
@@ -113,4 +118,13 @@
   grid-row: 4 / 13;
   background-color: $colorBackground;
   border: 2px dotted $colorHeader;
+}
+
+.notification_box {
+  grid-column: 7 / 13;
+  grid-row: 1 / 4;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 8px;
 }
