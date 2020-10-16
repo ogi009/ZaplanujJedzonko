@@ -1153,7 +1153,7 @@ footer {
   margin: 0 5px;
 }
 
-.schedule_plan {
+.schedule_plan, .edit_plan {
   height: 90%;
   width: 90%;
   margin: 40px auto 0;

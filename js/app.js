@@ -1,4 +1,4 @@
-import {verification} from "./inputVerifaction.js";
+import {verification} from "./inputVerification.js";
 
 document.addEventListener("DOMContentLoaded", function () {
 

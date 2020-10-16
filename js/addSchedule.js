@@ -1,6 +1,6 @@
 import allRecipies from "./recipe.js";
 import {allPlans, empty, Schedule} from "./schedule.js";
-import {verification} from "./inputVerifaction.js";
+import {verification} from "./inputVerification.js";
 import {getWeekNumber} from "./displaySchedule.js";
 import {showPlan} from "./schedule.js";
 
