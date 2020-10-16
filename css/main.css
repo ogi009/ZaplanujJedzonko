@@ -513,7 +513,7 @@ textarea {
   margin: 0 auto;
 }
 .banner .banner_img {
-  max-height: 50em;
+  max-height: 70em;
   display: flex;
   overflow-x: hidden;
 }
