@@ -1,4 +1,4 @@
-import {verification} from "./inputVerifaction.js";
+import {verification} from "./inputVerification.js";
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const form = document.querySelector("#name_form");
     const user = document.querySelector("#user_name");
     const gridPlan = document.querySelector(".grid_plan");
+
 
     let userName;
     if (localStorage.getItem('name') !== null) {
@@ -28,4 +29,6 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         })
     }
+
+
 });

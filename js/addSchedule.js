@@ -1,10 +1,10 @@
 import allRecipies from "./recipe.js";
-import {allPlans,Schedule} from "./schedule.js";
-import {verification} from "./inputVerifaction.js";
+import {allPlans, empty, Schedule} from "./schedule.js";
+import {verification} from "./inputVerification.js";
 import {getWeekNumber} from "./displaySchedule.js";
+import {showPlan} from "./schedule.js";
 
 document.addEventListener("DOMContentLoaded", function () {
-
 
     const save = document.querySelector(".schedule_plan-save");
     const weekNumber = document.querySelector(".plan_weekNumber-input");
@@ -36,59 +36,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     save.addEventListener('click', e => {
         if(weekNumber.value && planDescription.value && planTitle.value) {
-            const newPlan = new Schedule(allPlans.length + 1, weekNumber.value, planTitle.value, planDescription.value);
-            newPlan.monday = [
-                monday.children[1].children[0].value,
-                monday.children[2].children[0].value,
-                monday.children[3].children[0].value,
-                monday.children[4].children[0].value,
-                monday.children[5].children[0].value,
-            ];
-            newPlan.tuesday = [
-                tuesday.children[1].children[0].value,
-                tuesday.children[2].children[0].value,
-                tuesday.children[3].children[0].value,
-                tuesday.children[4].children[0].value,
-                tuesday.children[5].children[0].value,
-            ];
-            newPlan.wednesday = [
-                wednesday.children[1].children[0].value,
-                wednesday.children[2].children[0].value,
-                wednesday.children[3].children[0].value,
-                wednesday.children[4].children[0].value,
-                wednesday.children[5].children[0].value,
-            ];
-            newPlan.thursday = [
-                thursday.children[1].children[0].value,
-                thursday.children[2].children[0].value,
-                thursday.children[3].children[0].value,
-                thursday.children[4].children[0].value,
-                thursday.children[5].children[0].value,
-            ];
-            newPlan.friday = [
-                friday.children[1].children[0].value,
-                friday.children[2].children[0].value,
-                friday.children[3].children[0].value,
-                friday.children[4].children[0].value,
-                friday.children[5].children[0].value,
-            ];
-            newPlan.saturday = [
-                saturday.children[1].children[0].value,
-                saturday.children[2].children[0].value,
-                saturday.children[3].children[0].value,
-                saturday.children[4].children[0].value,
-                saturday.children[5].children[0].value,
-            ];
-            newPlan.sunday = [
-                sunday.children[1].children[0].value,
-                sunday.children[2].children[0].value,
-                sunday.children[3].children[0].value,
-                sunday.children[4].children[0].value,
-                sunday.children[5].children[0].value,
-            ];
+            let dayArray = [monday,tuesday,wednesday,thursday,friday,saturday,sunday];
+            var newPlan = new Schedule(allPlans.length + 1, weekNumber.value, planTitle.value, planDescription.value);
+
+            for (let key of dayArray) {
+                let tempArray = ['','','','',''];
+                newPlan[key.id] = tempArray.map((el,i) => key.children[i+1].children[0].value);
+            }
 
             allPlans.push(newPlan);
             newPlan.saveToLocalStorage();
+            newPlan.sortPlans();
+            newPlan.createList();
             mainPanel.classList.remove('d_none');
             schedulePanel.classList.add('d_none');
         }
