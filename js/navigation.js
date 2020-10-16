@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
         e.preventDefault();
         mainPanel.classList.remove('d_none');
         schedulePanel.classList.add('d_none');
-        recipesList.classList.remove('d_none');
+        recipesList.classList.add('d_none');
         scheduleList.classList.add('d_none')
         // recipePanel.classList.add('d_none');
 
