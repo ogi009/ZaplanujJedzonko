@@ -8,21 +8,21 @@ document.addEventListener("DOMContentLoaded", function () {
     const notificationArrayCounter = [];
 
 
-    const printNotificationArray = () =>{
+    const printNotificationArray = () => {
 
-        if (notificationArray.length>=3){
-            notificationBox.innerHTML=``;
-            notificationBox.prepend(notificationArray[notificationArray.length-3]);
-            notificationBox.prepend(notificationArray[notificationArray.length-2]);
-            notificationBox.prepend(notificationArray[notificationArray.length-1]);
-        } else {for (let el of notificationArray) {
-            notificationBox.prepend(el);
-                }
+        if (notificationArray.length >= 3) {
+            notificationBox.innerHTML = ``;
+            notificationBox.prepend(notificationArray[notificationArray.length - 3]);
+            notificationBox.prepend(notificationArray[notificationArray.length - 2]);
+            notificationBox.prepend(notificationArray[notificationArray.length - 1]);
+        } else {
+            for (let el of notificationArray) {
+                notificationBox.prepend(el);
+            }
 
         }
 
     }
-
 
 
     const addNotificationInfo = (notificationInfo) => {
@@ -109,12 +109,10 @@ document.addEventListener("DOMContentLoaded", function () {
     addNotificationSucces("Świetnie że jesteś! Udanego planowania i samcznego!");
     addNotificationWaringn("Pamiętaj, aby dodać plan!");
 
-    addNotificationSucces("1");
+    // addNotificationSucces("1");
     // addNotificationWaringn("2");
     // addNotificationWaringn("3");
     // addNotificationWaringn("4");
-
-
 
 
 });

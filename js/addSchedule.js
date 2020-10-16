@@ -1,4 +1,4 @@
-import allRecipies from "./recipe.js";
+import allRecipies from "./newRecipt.js";
 import {allPlans,Schedule} from "./schedule.js";
 import {verification} from "./inputVerifaction.js";
 import {getWeekNumber} from "./displaySchedule.js";
