@@ -1,6 +1,7 @@
 import allRecipies from "./recipe.js";
 import {allPlans,Schedule} from "./schedule.js";
 import {verification} from "./inputVerifaction.js";
+import {getWeekNumber} from "./displaySchedule.js";
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -21,6 +22,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const sunday = document.getElementById('sunday')
 
     const selects = document.querySelectorAll(".recipe_select");
+
+    weekNumber.value = getWeekNumber(new Date());
 
     let selectsOptions = '';
 

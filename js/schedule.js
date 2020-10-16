@@ -26,9 +26,10 @@ export function Schedule(id, weekNumber, title, description) {
 /* Metoda `.showPlan()`
     wyświetlająca plan na ekranie aplikacji
  */
-Schedule.prototype.showPlan = function () {
+Schedule.prototype.showPlan = function (weekNr = this.weekNumber) {
 
     const weekPlanTitle = document.querySelector(".week_plan_title");
+    this === empty ? weekPlanTitle.innerText = this.title + ' ' + weekNr :
     weekPlanTitle.innerText = `Twój plan na ${this.weekNumber} tydzień`;
 
     const weekPlan = document.querySelector("#schedule_table");
@@ -106,11 +107,9 @@ Storage.prototype.getObject = function(key) {
 }
 
 Schedule.prototype.saveToLocalStorage = function () {
-    if (localStorage.getItem(`Schedule` !== null)) {
 
-    } else {
-        localStorage.setObject(`'Schedule'`,allPlans);
-    }
+    localStorage.setObject(`'Schedule'`,allPlans);
+
 }
 
 // przygotowanie globalnej zmiennej przechowującej wszystkie plany
@@ -119,14 +118,12 @@ if(localStorage.getObject(`'Schedule'`)) {
     allPlans = localStorage.getObject(`'Schedule'`);
 }
 
-
-// Schedule.prototype.getFromLocalStorage = function () {
-//     console.log(allPlans);
-//     const scheduleAmount = localStorage.getItem('ScheduleAmount');
-//     let testArray = [];
-//
-//     for (let i = 1;i<=scheduleAmount;i++)
-//         const array = localStorage.getItem(`Schedule ${i}`);
-//
-// }
+export const empty = new Schedule(0, 0, 'Wygląda na to że nie masz jeszcze żadnego planu na ten tydzień', '');
+empty.monday =['','','','',''];
+empty.tuesday =['','','','',''];
+empty.wednesday =['','','','',''];
+empty.thursday = ['','','','',''];
+empty.friday =['','','','',''];
+empty.saturday =['','','','',''];
+empty.sunday =['','','','',''];
 // utworzenie przykładowego obiektu planu
