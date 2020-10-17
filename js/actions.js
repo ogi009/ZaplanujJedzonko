@@ -1,5 +1,5 @@
 import {allPlans, empty, Schedule} from "./schedule.js";
-import allRecipies from "./recipe.js";
+import allRecipies from "./newRecipt.js";
 
 const monday = document.getElementById('monday');
 const tuesday = document.getElementById('tuesday')

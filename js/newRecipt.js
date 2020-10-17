@@ -1,16 +1,10 @@
-import {verification} from "./inputVerifaction.js"
+// import {verification} from "./inputVerification.js"
 
 document.addEventListener("DOMContentLoaded", function () {
 
     const addNewRecipt = document.querySelector(".addNewRecipt");
-    const addNewPlan = document.querySelector(".addNewPlan");
     const gridPlan = document.querySelector(".grid_plan");
     const gridPlan2 = document.querySelector(".grid_plan2");
-    const schelduePlan = document.querySelector(".schedule_plan");
-    const saveButton =document.querySelector(".schedule_plan-save");
-    const editButton = document.querySelector(".schedule_plan-edit");
-    const saveTitle = document.querySelector(".schedule_plan-title");
-    const editTitle = document.querySelector(".schedule_edit-title");
 
     addNewRecipt.addEventListener("click", e => {
         e.preventDefault();
@@ -82,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 //przygotowanie globalnej zmiennej przechowującej wszystkie przepisy
-    const allRecipies = [];
+    var allRecipies = [];
     let counterPrint = 0;
 
     const printToAllRecipies = () => {
@@ -95,15 +89,36 @@ document.addEventListener("DOMContentLoaded", function () {
             newRecipe1.ingredients.push(el.innerText);
         }
 
-    addNewPlan.addEventListener("click", e=> {
-        e.preventDefault();
-        gridPlan.classList.add("d_none");
-        schelduePlan.classList.remove("d_none");
-        saveButton.classList.remove('d_none');
-        editButton.classList.add('d_none');
-        saveTitle.classList.remove('d_none');
-        editTitle.classList.add('d_none');
-    })}
+        const liInstructionsArray = recipesContainer.querySelectorAll("li");
 
-    printToAllRecipies();
+        for (let el of liInstructionsArray) {
+            newRecipe1.instructions.push(el.innerText);
+        }
+        allRecipies.push(newRecipe1); // dodanie przepisu do globalnej tablicy
+
+
+        console.clear();
+        allRecipies[counterPrint].showInfo();
+        allRecipies[counterPrint].saveToLocalStorage();
+        newRecipeInput1.value = "";
+        newRecipeInput2.value = "";
+        textareaInstrcions.value = "";
+        textareaIngridients.value = "";
+        recipesContainer.innerText = "";
+        ingridientsContainer.innerText = "";
+        gridPlan2.classList.add("d_none");
+        gridPlan.classList.remove("d_none");
+        counterPrint++;
+        console.log(allRecipies);
+    }
+
+
+
+    newRecipeButton.addEventListener("click", e => {
+        printToAllRecipies();
+
+    })
+    export default allRecipies; //szymonmen
 });
+
+
