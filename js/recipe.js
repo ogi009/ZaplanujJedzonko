@@ -9,6 +9,7 @@ Recipe(id,title,description)
     instructions - array, instrukcje przepisu
 */
 
+
 export function Recipe(id, title, description) {
     this.id = id; // id przepisu
     this.title = title; // nazwa przepisu
@@ -28,6 +29,21 @@ Recipe.prototype.showInfo = function() {
     this.instructions.map(function(elem, i) {
         console.warn(i, elem); // wyświetl każdy element
     })
+}
+Recipe.prototype.createList = function () {
+    const list = document.querySelector(".recipe_list-table");
+    list.children[1].innerHTML = '';
+
+    for(let el of allRecipies) {
+        const listElement = document.createElement('tr');
+        listElement.innerHTML = `
+        <td class="list_id">${el.id}</td>
+        <td class="list_name">${el.title}</td>
+        <td class="list_description">${el.description}</td>
+        <td class="list_actions"><div class="list_actions-container"><i class="far fa-edit schedule-edit"></i><i class="far fa-trash-alt schedule-delete"></i><div></div></td>
+        `
+        list.children[1].append(listElement);
+    }
 }
 
 /*
@@ -63,5 +79,5 @@ newRecipe1.instructions.push("Na rozgrzaną patelnię wbij jajaka i mieszaj dopr
 newRecipe1.instructions.push("Podawaj z grzankami. Smacznego!");
 
 //console.clear(); // wyświetla pierwszy przepis w konsoli
-
+newRecipe1.createList();
 export default allRecipies;

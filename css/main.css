@@ -1169,6 +1169,7 @@ footer {
   color: #6b716f;
   font-size: 1.7em;
   font-family: "Open Sans", sans-serif;
+  border: 2px dotted black;
 }
 
 .d_grid {
@@ -1289,6 +1290,7 @@ footer {
   color: #6b716f;
   font-size: 1.7em;
   font-family: "Open Sans", sans-serif;
+  border: 2px dotted black;
 }
 
 .list_header {
