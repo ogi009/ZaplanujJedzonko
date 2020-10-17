@@ -199,35 +199,6 @@
                     </tbody>
                 </table>
             </div>
-            <div class="container_recipe grid_plan2 d_none">
-                <div class="el el1">
-                    <h1 class="new_recipe_title">NOWY PRZEPIS</h1>
-                    <button class="new_recipe_button">Zapisz i zamknij</button>
-                </div>
-                <div class="el el2">
-                    <h2 class="new_recipe_name">Nazwa przepisu</h2>
-                    <label for="recipe_name"></label>
-                    <textarea id="recipe_name" class="new_recipe_input1" rows="1"></textarea><br>
-                    <h2 class="new_recipe_description">Opis Przepisu</h2>
-                    <label for="texarea_decription"></label>
-                    <textarea id="texarea_decription" class="new_recipe_input2"></textarea>
-                </div>
-                <div class="el el3">
-                    <h1 class="instructions">INSTRUCKJE</h1>
-                    <textarea name="recipe_instructions" id="recipce_instructions"
-                              class="textarea_instrcions"></textarea>
-                    <button class="button"><i class="fas fa-plus"></i></button>
-                    <div class="recipes_container"></div>
-                </div>
-                <div class="el el4">
-                    <h1 class="ingridients">SKŁADNIKI</h1>
-                    <textarea name="recipe_ingridients" id="recipce_ingridients"
-                              class="textarea_indigirends"></textarea>
-                    <button class="button2"><i class="fas fa-plus"></i></button>
-                    <div class="indigirends_container"></div>
-                </div>
-
-
             <div class="grid_plan2 d_none">
                 <div class="el el1">
                     <h1 class="new_recipe_title">NOWY PRZEPIS</h1>
@@ -245,15 +216,19 @@
                     <h1 class="instructions">INSTRUCKJE</h1>
                     <textarea name="recipe_instructions" id="recipce_instructions"
                               class="textarea_instrcions"></textarea>
-                    <button class="recipe_button">+</button>
-                    <div class="recipes_container"></div>
+                    <button class="recipe_button newInstructionBtn">+</button>
+                    <div class="recipes_container">
+                        <ul class="recipes_container_ul"></ul>
+                    </div>
                 </div>
                 <div class="el el4">
                     <h1 class="ingridients">SKŁADNIKI</h1>
                     <textarea name="recipe_ingridients" id="recipce_ingridients"
-                              class="textarea_indigirends"></textarea>
-                    <button class="recipe_button">+</button>
-                    <div class="indigirends_container"></div>
+                              class="textarea_ingridients"></textarea>
+                    <button class="recipe_button newIngridiendsBtn">+</button>
+                    <div class="ingridients_container">
+                        <ul class="ingridients_container_ul"></ul>
+                    </div>
                 </div>
 
             </div>

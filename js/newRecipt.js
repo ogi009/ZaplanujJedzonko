@@ -1,7 +1,7 @@
+import {Recipe} from "./recipe.js"
 import allRecipies from "./recipe.js"
 
 document.addEventListener("DOMContentLoaded", function () {
-
 
     const addNewRecipt = document.querySelector(".addNewRecipt");
     const gridPlan = document.querySelector(".grid_plan");
@@ -12,6 +12,8 @@ document.addEventListener("DOMContentLoaded", function () {
         gridPlan.classList.add("d_none");
         gridPlan2.classList.remove("d_none");
     })
+
+
     const newInstructionBtn = document.querySelector(".newInstructionBtn");
     const textareaInstrcions = document.querySelector(".textarea_instrcions");
     const recipesContainer = document.querySelector(".recipes_container_ul");
@@ -64,8 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
         console.clear();
-        allRecipies[counterPrint].showInfo();
-        allRecipies[counterPrint].saveToLocalStorage();
+        newRecipe1.saveToLocalStorage();
         newRecipeInput1.value = "";
         newRecipeInput2.value = "";
         textareaInstrcions.value = "";
@@ -76,6 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
         gridPlan.classList.remove("d_none");
         counterPrint++;
         console.log(allRecipies);
+        console.log(localStorage);
     }
 
 

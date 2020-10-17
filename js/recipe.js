@@ -9,7 +9,7 @@ Recipe(id,title,description)
     instructions - array, instrukcje przepisu
 */
 
-function Recipe(id, title, description) {
+export function Recipe(id, title, description) {
     this.id = id; // id przepisu
     this.title = title; // nazwa przepisu
     this.description = description; // opis przepisu
@@ -33,16 +33,15 @@ Recipe.prototype.showInfo = function() {
 /*
 Metoda `.saveToLocalStorage()`
 zapisująca do localStorage informacje o przepisie */
-Recipe.prototype.saveToLocalStorage = function() {
-    /* if(){
-        // uzupełnij
-      }else{
-        // uzupełnij
-      } */
+Recipe.prototype.saveToLocalStorage = function () {
+    localStorage.setObject(`'Recipt'`,allRecipies);
 }
 
 //przygotowanie globalnej zmiennej przechowującej wszystkie przepisy
 var allRecipies = [];
+if(localStorage.getObject(`'Recipt'`)) {
+    allRecipies = localStorage.getObject(`'Recipt'`);
+}
 
 // utworzenie kilku przykładowych przepisów
 var newRecipe1 = new Recipe(allRecipies.length + 1, "Jajecznica na boczku", "Taką jajecznicę lubie najbardziej ;p ");
@@ -63,7 +62,6 @@ newRecipe1.instructions.push("Dodaj boczek.");
 newRecipe1.instructions.push("Na rozgrzaną patelnię wbij jajaka i mieszaj doprawiając.");
 newRecipe1.instructions.push("Podawaj z grzankami. Smacznego!");
 
-//console.clear();
-allRecipies[0].showInfo(); // wyświetla pierwszy przepis w konsoli
+//console.clear(); // wyświetla pierwszy przepis w konsoli
 
 export default allRecipies;

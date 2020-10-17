@@ -1,4 +1,4 @@
-import allRecipies from "./recipe.js";
+//import allRecipies from "./recipe.js";
 import {allPlans, empty, Schedule} from "./schedule.js";
 import {verification} from "./inputVerification.js";
 import {getWeekNumber} from "./displaySchedule.js";
@@ -24,7 +24,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const selects = document.querySelectorAll(".recipe_select");
 
     weekNumber.value = getWeekNumber(new Date());
+    let allRecipies;
+    if(localStorage.getObject(`'Recipt'`)) {
+        allRecipies = localStorage.getObject(`'Recipt'`);
 
+    }
     let selectsOptions = '';
 
     for (let el of allRecipies) {
