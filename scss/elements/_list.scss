@@ -1,0 +1,72 @@
+.schedule_list,.recipes_list {
+  height: 90%;
+  width: 90%;
+  margin: 40px auto 0;
+  padding: 2em;
+  background-color: $colorBackground;
+  color: $colorTable;
+  font-size: 1.7em;
+  font-family: $fontOpenSans;
+}
+
+.list_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  padding-bottom: 10px;
+  border-bottom: 1px solid $colorTable;
+  color: $colorButtons;
+
+  button {
+    font-size: 0.9em;
+    background-color: $colorSuccess;
+    color: white;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 10px;
+  }
+}
+.schedule_list-table,.recipe_list-table {
+  text-align: left;
+  width: 98%;
+  margin: 10px auto;
+  th {
+
+    padding: 20px 10px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-top: 1px solid $colorText;
+    border-bottom: 1px solid $colorText;;
+  }
+  td {
+    padding: 10px;
+    font-size: 0.8em;
+    border-bottom: 1px solid $colorText;;
+  }
+  .list_id{
+    width: 5%;
+  }
+  .list_name{
+    width: 15%;
+  }
+  .list_description{
+    width: 60%;
+  }
+  .list_weekNumber{
+    width: 12%;
+  }
+  .list_actions{
+    width: 8%;
+    .list_actions-container{
+      display: flex;
+      justify-content: space-around;
+      .fa-edit {
+        color: $colorWarning;
+      }
+      .fa-trash-alt{
+        color: $colorIconBin;
+      }
+    }
+  }
+}

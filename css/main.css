@@ -1160,7 +1160,7 @@ footer {
   margin: 0 5px;
 }
 
-.schedule_plan {
+.schedule_plan, .edit_plan {
   height: 90%;
   width: 90%;
   margin: 40px auto 0;
@@ -1188,6 +1188,7 @@ footer {
   padding-bottom: 10px;
   border-bottom: 1px solid #6b716f;
   color: #FF6600;
+  font-weight: bold;
 }
 .plan_header button {
   font-size: 0.7em;
@@ -1276,7 +1277,79 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  padding: 21px;
+}
+
+.schedule_list, .recipes_list {
+  height: 90%;
+  width: 90%;
+  margin: 40px auto 0;
+  padding: 2em;
+  background-color: #FFFFFA;
+  color: #6b716f;
+  font-size: 1.7em;
+  font-family: "Open Sans", sans-serif;
+}
+
+.list_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #6b716f;
+  color: #FF6600;
+}
+.list_header button {
+  font-size: 0.9em;
+  background-color: #468966;
+  color: white;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 10px;
+}
+
+.schedule_list-table, .recipe_list-table {
+  text-align: left;
+  width: 98%;
+  margin: 10px auto;
+}
+.schedule_list-table th, .recipe_list-table th {
+  padding: 20px 10px;
+  font-size: 1.1em;
+  font-weight: bold;
+  border-top: 1px solid #A1A194;
+  border-bottom: 1px solid #A1A194;
+}
+.schedule_list-table td, .recipe_list-table td {
+  padding: 10px;
+  font-size: 0.8em;
+  border-bottom: 1px solid #A1A194;
+}
+.schedule_list-table .list_id, .recipe_list-table .list_id {
+  width: 5%;
+}
+.schedule_list-table .list_name, .recipe_list-table .list_name {
+  width: 15%;
+}
+.schedule_list-table .list_description, .recipe_list-table .list_description {
+  width: 60%;
+}
+.schedule_list-table .list_weekNumber, .recipe_list-table .list_weekNumber {
+  width: 12%;
+}
+.schedule_list-table .list_actions, .recipe_list-table .list_actions {
+  width: 8%;
+}
+.schedule_list-table .list_actions .list_actions-container, .recipe_list-table .list_actions .list_actions-container {
+  display: flex;
+  justify-content: space-around;
+}
+.schedule_list-table .list_actions .list_actions-container .fa-edit, .recipe_list-table .list_actions .list_actions-container .fa-edit {
+  color: #FFB03B;
+}
+.schedule_list-table .list_actions .list_actions-container .fa-trash-alt, .recipe_list-table .list_actions .list_actions-container .fa-trash-alt {
+  color: #BD4932;
 }
 
 .d_none {
