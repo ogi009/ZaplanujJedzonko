@@ -1,4 +1,4 @@
-import {verification} from "./inputVerifaction.js"
+import {verification} from "./inputVerification.js"
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const gridPlan = document.querySelector(".grid_plan");
     const gridPlan2 = document.querySelector(".grid_plan2");
     const schelduePlan = document.querySelector(".schedule_plan");
-    const saveButton =document.querySelector(".schedule_plan-save");
+    const saveButton = document.querySelector(".schedule_plan-save");
     const editButton = document.querySelector(".schedule_plan-edit");
     const saveTitle = document.querySelector(".schedule_plan-title");
     const editTitle = document.querySelector(".schedule_edit-title");
@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 //przygotowanie globalnej zmiennej przechowującej wszystkie przepisy
-    const allRecipies = [];
+    var allRecipies = [];
     let counterPrint = 0;
 
     const printToAllRecipies = () => {
