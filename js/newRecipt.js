@@ -103,6 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
         editButton.classList.add('d_none');
         saveTitle.classList.remove('d_none');
         editTitle.classList.add('d_none');
+    })}
 
-    })
+    printToAllRecipies();
 });
